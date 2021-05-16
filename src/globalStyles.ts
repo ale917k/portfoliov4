@@ -12,57 +12,64 @@ export const theme = {
   palette: {
     common: {
       white: "#ffffff",
-      black: "#1a1a1d",
+      black: "#292E38",
     },
     type: "light",
-    primary: "#2979ff",
+    primary: "#346FEF",
     grey: {
-      50: "#f2f2f2",
-      100: "#d3d3d3",
-      150: "#404040",
+      50: "#F9FAFB",
+      100: "#E5E8EB",
+      150: "#BAC3C9",
     },
-    text: "rgba(0, 0, 0, 0.87)",
+    text: "#292E38",
   },
   typography: {
-    fontFamily: "'Roboto', 'Helvetica', 'Arial', sans-serif",
-    fontSize: 14,
+    fontFamily: "'Poppins', 'Roboto', 'Helvetica', 'Arial', sans-serif",
+    fontSize: 16,
     fontWeightLight: 300,
     fontWeightRegular: 400,
     fontWeightBold: 700,
     h1: {
-      fontFamily: "'Roboto', 'Helvetica', 'Arial', sans-serif",
-      fontWeight: 300,
-      fontSize: "6rem",
-      lineHeight: 1.167,
-      letterSpacing: "-0.01562em",
+      fontWeight: 700,
+      fontSize: "3.625rem", // 58px
+      lineHeight: 1.25,
     },
     h2: {
-      fontFamily: "'Roboto', 'Helvetica', 'Arial', sans-serif",
       fontWeight: 300,
-      fontSize: "3.75rem",
-      lineHeight: 1.2,
-      letterSpacing: "-0.00833em",
+      fontSize: "1rem", // 16px
+      lineHeight: 1.5,
+      letterSpacing: "0.15em",
     },
     h3: {
-      fontFamily: "'Roboto', 'Helvetica', 'Arial', sans-serif",
-      fontWeight: 400,
-      fontSize: "3rem",
-      lineHeight: 1.167,
+      fontWeight: 700,
+      fontSize: "2.25rem", // 36px
+      lineHeight: 1.5,
+      letterSpacing: "0em",
+    },
+    h4: {
+      fontWeight: 700,
+      fontSize: "1.75rem", // 28px
+      lineHeight: 1.5,
       letterSpacing: "0em",
     },
     body: {
-      fontFamily: "'Roboto', 'Helvetica', 'Arial', sans-serif",
-      fontWeight: 400,
-      fontSize: "1rem",
-      lineHeight: 1.5,
-      letterSpacing: "0.00938em",
+      lg: {
+        fontSize: "1rem", // 16px
+        lineHeight: 1.5,
+      },
+      reg: {
+        fontSize: "0.875rem", // 14px
+        lineHeight: 1.5,
+      },
+      sm: {
+        fontSize: "0.75rem", // 12px
+        lineHeight: 1.5,
+      },
     },
     button: {
-      fontFamily: "'Roboto', 'Helvetica', 'Arial', sans-serif",
       fontWeight: 500,
-      fontSize: "0.875rem",
+      fontSize: "0.875rem", // 14px
       lineHeight: 1.75,
-      letterSpacing: "0.02857em",
       textTransform: "uppercase",
     },
   },
@@ -102,7 +109,15 @@ const GlobalStyles = createGlobalStyle`
 
   html {
     ${windowSizes};
-    font-size: 15;
+    font-family: ${theme.typography.fontFamily};
+    font-size: ${theme.typography.fontSize}px;
+    font-weight: ${theme.typography.fontWeightLight};
+
+    &:not(:hover) #cursorCircle {
+      opacity: 0;
+      width: 32px !important;
+      height: 32px !important;
+    }
   };
 
   body {
@@ -114,14 +129,29 @@ const GlobalStyles = createGlobalStyle`
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: ${theme.palette.common.white};
+  };
 
-    & > * {
-      ${windowSizes};
-    };
+  h1 {
+    ${theme.typography.h1};
+  };
+
+  h2 {
+    ${theme.typography.h2};
+    text-transform: uppercase;
+    color: ${theme.palette.grey[150]};
+  };
+
+  h3 {
+    ${theme.typography.h3};
+  };
+
+  h4 {
+    ${theme.typography.h4};
   };
 
   img {
-    width: 100%;
+    width: 50%;
   };
 `;
 
