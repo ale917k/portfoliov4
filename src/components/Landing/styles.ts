@@ -3,7 +3,7 @@ import { theme } from "globalStyles";
 
 export const Background = styled.div`
   width: 100%;
-  height: 100%;
+  height: 100vh;
   background: linear-gradient(0deg, ${theme.palette.grey[50]} 0%, ${theme.palette.common.white} 100%);
 `;
 

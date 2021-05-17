@@ -1,6 +1,6 @@
 import React from "react";
 // import ReactGA from "react-ga";
-import Cursor from "components/Cursor";
+import Cursor from "App/Cursor";
 import Landing from "components/Landing";
 import Work from "components/Work";
 import About from "components/About";

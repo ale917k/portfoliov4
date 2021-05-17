@@ -108,7 +108,6 @@ const GlobalStyles = createGlobalStyle`
   };
 
   html {
-    ${windowSizes};
     font-family: ${theme.typography.fontFamily};
     font-size: ${theme.typography.fontSize}px;
     font-weight: ${theme.typography.fontWeightLight};
@@ -129,7 +128,6 @@ const GlobalStyles = createGlobalStyle`
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: ${theme.palette.common.white};
   };
 
   h1 {

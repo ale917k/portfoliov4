@@ -10,7 +10,7 @@ type Props = {
  * @param {ReactNode} children - Container children.
  * @returns Wrapped children.
  */
-const Container: React.FC<Props> = ({ children }) => {
+const Container: React.FC<Props> = ({ children }: Props) => {
   return <Wrapper>{children}</Wrapper>;
 };
 

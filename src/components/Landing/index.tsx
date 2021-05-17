@@ -1,7 +1,7 @@
 import React from "react";
 import Container from "components/Container";
-import Illustration from "components/Illustration";
-import Menu from "components/Menu";
+import Illustration from "components/Landing/Illustration";
+import Menu from "components/Landing/Menu";
 import { Background, Caption, Wrapper, Title, Scroll } from "./styles";
 
 /**

@@ -8,18 +8,7 @@ export const Wrapper = styled.div`
   max-width: 1280px;
   height: 100%;
   margin: 0 auto;
-
-  ${theme.breakpoints.desktop} {
-    max-width: 880px;
-  }
-
-  ${theme.breakpoints.tablet} {
-    max-width: 720px;
-  }
-
-  ${theme.breakpoints.phone} {
-    max-width: 540px;
-  }
+  padding: 0 ${theme.spacing(3)};
 `;
 
 export default Wrapper;
