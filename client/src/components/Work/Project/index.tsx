@@ -1,5 +1,7 @@
 import React from "react";
-import { Wrapper, Preview, Content, Title, Headline } from "./styles";
+import Container from "components/Container";
+import Preview from "./Preview";
+import { Wrapper, Content, Title, Headline } from "./styles";
 
 type Props = {
   title: string;
@@ -22,12 +24,14 @@ type Props = {
 const Project: React.FC<Props> = ({ title, headline, bg }: Props) => {
   return (
     <Wrapper>
-      <Preview bg={bg} />
+      <Container direction="row">
+        <Preview bg={bg} />
 
-      <Content>
-        <Title>{title}</Title>
-        <Headline>{headline}</Headline>
-      </Content>
+        <Content>
+          <Title>{title}</Title>
+          <Headline>{headline}</Headline>
+        </Content>
+      </Container>
     </Wrapper>
   );
 };

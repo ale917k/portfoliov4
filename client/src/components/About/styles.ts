@@ -27,6 +27,7 @@ export const Portrait = styled.img`
 `;
 
 export const SkillsWrapper = styled.div`
+  width: 100%;
   margin-top: -${theme.spacing(10)};
   background: ${theme.palette.grey[50]};
   clip-path: polygon(0 20%, 100% 0%, 100% 100%, 0% 100%);

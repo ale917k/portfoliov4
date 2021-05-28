@@ -3,7 +3,7 @@ import { theme } from "globalStyles";
 
 export const Background = styled.div`
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background: linear-gradient(0deg, ${theme.palette.grey[50]} 0%, ${theme.palette.common.white} 100%);
 `;
 
@@ -23,7 +23,7 @@ export const Wrapper = styled.div`
 
 export const Title = styled.h1`
   flex: 1;
-  margin-right: -15%;
+  margin-right: -14%;
 `;
 
 export const Scroll = styled.span`

@@ -3,6 +3,7 @@ import { Wrapper } from "./styles";
 
 type Props = {
   children: React.ReactNode;
+  direction?: "row" | "column";
 };
 
 /**
@@ -10,8 +11,8 @@ type Props = {
  * @param {ReactNode} children - Container children.
  * @returns Wrapped children.
  */
-const Container: React.FC<Props> = ({ children }: Props) => {
-  return <Wrapper>{children}</Wrapper>;
+const Container: React.FC<Props> = ({ children, direction }: Props) => {
+  return <Wrapper direction={direction}>{children}</Wrapper>;
 };
 
 export default Container;

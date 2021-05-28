@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { animated } from "react-spring";
 
 export const SvgWrapper = styled.div`
-  flex: 1.2;
+  flex: 1.5;
   display: flex;
   align-items: center;
   position: relative;
