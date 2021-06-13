@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import { Link } from "react-router-dom";
 import { theme } from "globalStyles";
 
 const constrainToPercentage = (value: number) => Math.min(Math.max(value, 0), 100);
@@ -14,12 +15,14 @@ export const Wrapper = styled.div`
 `;
 
 export const ProjectCover = styled.div<{ bgHsl: number[] }>`
+  display: flex;
+  justify-content: center;
   width: 100%;
   height: 70vh;
   background: ${(props) => `linear-gradient(to bottom, 
     hsl(${props.bgHsl[0]}, ${props.bgHsl[1]}%, ${constrainToPercentage(props.bgHsl[2] - 10)}%) 0%,
     hsl(${props.bgHsl[0]}, ${props.bgHsl[1]}%, ${props.bgHsl[2]}%) 80%)`};
-  text-align: center;
+  overflow: hidden;
 `;
 
 export const CoverImg = styled.img`
@@ -57,10 +60,34 @@ export const BriefWrapper = styled.div`
 `;
 
 export const Title = styled.h1`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
   grid-column: span 2;
   padding: ${theme.spacing(16)} 0 ${theme.spacing(5)};
   text-align: center;
+`;
+
+export const BackButton = styled(Link)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 0;
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+  border-radius: 50%;
+  ${theme.typography.h2};
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: ${theme.palette.common.black};
+
+  ${theme.breakpoints.desktop} {
+    display: none;
+  }
 `;
 
 export const Year = styled.h2`

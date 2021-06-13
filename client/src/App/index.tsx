@@ -19,6 +19,7 @@ const App: React.FC = () => {
     from: { opacity: 0, transform: "translate3d(100vw, 0, 0)" },
     enter: () => async (next) => {
       await sleep(800);
+      window.scrollTo(0, 0);
       await next({ opacity: 1, transform: "translate3d(0, 0, 0)" });
     },
     leave: { opacity: 0, transform: "translate3d(-20vw, 0, 0)" },

@@ -1,7 +1,16 @@
 import React from "react";
 import Container from "components/Container";
 import Headline from "components/Headline";
-import { BriefWrapper, Title, Year, ConceptWrapper, Concept, DeliverablesWrapper, Deliverable } from "./styles";
+import {
+  BriefWrapper,
+  Title,
+  BackButton,
+  Year,
+  ConceptWrapper,
+  Concept,
+  DeliverablesWrapper,
+  Deliverable,
+} from "./styles";
 
 type Props = {
   title: string;
@@ -13,7 +22,12 @@ type Props = {
 const Palette: React.FC<Props> = ({ title, year, concept, deliverables }: Props) => (
   <Container height="auto">
     <BriefWrapper>
-      <Title>{title}</Title>
+      <Title>
+        {title}
+        <BackButton to="/" cursor-class="arrow">
+          Back
+        </BackButton>
+      </Title>
       <Year>{year}</Year>
 
       <ConceptWrapper>
