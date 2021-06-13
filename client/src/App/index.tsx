@@ -18,7 +18,7 @@ const App: React.FC = () => {
   const transitions = useTransition(location, {
     from: { opacity: 0, transform: "translate3d(100vw, 0, 0)" },
     enter: () => async (next) => {
-      await sleep(800);
+      await sleep(500);
       window.scrollTo(0, 0);
       await next({ opacity: 1, transform: "translate3d(0, 0, 0)" });
     },

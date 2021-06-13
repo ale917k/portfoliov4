@@ -24,7 +24,7 @@ const PageNotFound: React.FC = () => {
     <Wrapper onMouseMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}>
       <Container>
         <TextWrapper>
-          <Title>Aw, snap! This page is lost in space</Title>
+          <Title>Aw, snap! This page looks lost in space</Title>
           <Text>
             Let's go&nbsp;
             <Link to="/">home</Link>
