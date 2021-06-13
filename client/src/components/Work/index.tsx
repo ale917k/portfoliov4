@@ -9,18 +9,16 @@ import { Wrapper } from "./styles";
  * Work Section.
  * @returns Arrays of Projects.
  */
-const Work: React.FC = () => {
-  return (
-    <Wrapper id="work">
-      <Container>
-        <Headline>Work</Headline>
+const Work: React.FC = () => (
+  <Wrapper id="work">
+    <Container>
+      <Headline>Work</Headline>
 
-        {projects.map((project, index) => (
-          <Project key={index} {...project} />
-        ))}
-      </Container>
-    </Wrapper>
-  );
-};
+      {projects.map((project, index) => (
+        <Project key={index} {...project} isOdd={!!(projects.length % 2)} />
+      ))}
+    </Container>
+  </Wrapper>
+);
 
 export default Work;

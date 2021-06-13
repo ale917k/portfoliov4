@@ -1,0 +1,172 @@
+import styled, { css } from "styled-components";
+import SuspenseImage from "components/SuspenseImage";
+import { theme } from "globalStyles";
+
+const constrainToPercentage = (value: number) => Math.min(Math.max(value, 0), 100);
+
+// index.tsx
+export const Wrapper = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: ${theme.palette.common.white};
+`;
+
+export const ProjectCover = styled.div<{ bgHsl: number[] }>`
+  width: 100%;
+  height: 70vh;
+  background: ${(props) => `linear-gradient(to bottom, 
+    hsl(${props.bgHsl[0]}, ${props.bgHsl[1]}%, ${constrainToPercentage(props.bgHsl[2] - 10)}%) 0%,
+    hsl(${props.bgHsl[0]}, ${props.bgHsl[1]}%, ${props.bgHsl[2]}%) 80%)`};
+`;
+
+export const CoverSuspenseImage = styled(SuspenseImage)`
+  height: 100%;
+`;
+
+export const RespImgWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+`;
+
+export const RespImgBg = styled.div`
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: ${theme.palette.grey[50]};
+  clip-path: polygon(0 0, 100% 20%, 100% 100%, 0% 100%);
+`;
+
+export const RespImg = styled(SuspenseImage)`
+  min-width: min(1000px, 150%);
+  width: 100%;
+  max-width: 1440px;
+  padding: 5% 0;
+  z-index: 1;
+`;
+
+// ProjectBrief.tsx
+export const BriefWrapper = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+`;
+
+export const Title = styled.h1`
+  position: relative;
+  grid-column: span 2;
+  padding: ${theme.spacing(16)} 0 ${theme.spacing(5)};
+  text-align: center;
+`;
+
+export const Year = styled.h2`
+  grid-column: span 2;
+  text-align: center;
+`;
+
+export const ConceptWrapper = styled.div`
+  h2 {
+    margin-bottom: ${theme.spacing(3)};
+  }
+
+  ${theme.breakpoints.phone} {
+    grid-column: span 2;
+  }
+`;
+
+export const Concept = styled.p`
+  max-width: 550px;
+  ${theme.typography.body.reg};
+`;
+
+export const DeliverablesWrapper = styled.div`
+  margin-top: ${theme.spacing(13)};
+
+  h2 {
+    margin-bottom: ${theme.spacing(3)};
+  }
+
+  ${theme.breakpoints.phone} {
+    grid-column: span 2;
+    margin-top: 0;
+  }
+`;
+
+export const Deliverable = styled.p`
+  padding-bottom: ${theme.spacing(0.5)};
+  ${theme.typography.body.reg};
+  text-align: right;
+  text-transform: uppercase;
+`;
+
+export const PaletteWrapper = styled.div`
+  display: flex;
+  position: relative;
+`;
+
+const coloursStyles = css`
+  display: flex;
+  gap: ${theme.spacing(2)};
+  width: 60%;
+
+  ${theme.breakpoints.tablet} {
+    gap: ${theme.spacing(1)};
+  }
+`;
+
+export const LeftColours = styled.div`
+  ${coloursStyles};
+  justify-content: flex-end;
+  margin-right: -8%;
+  padding-bottom: 20%;
+  z-index: 1;
+`;
+
+export const RightColours = styled.div`
+  ${coloursStyles};
+  margin-left: -8%;
+  padding-top: 20%;
+`;
+
+export const Colour = styled.div<{ bg: string; colourNumbers: number }>`
+  width: ${(props) => 100 / props.colourNumbers}%;
+  background: ${(props) => props.bg};
+  border-radius: ${theme.shape.borderRadius};
+
+  &:before {
+    content: "";
+    display: block;
+    padding-bottom: 250%;
+  }
+
+  ${theme.breakpoints.phone} {
+    border-radius: 4px;
+  }
+`;
+
+// Typography.tsx
+export const TypographyImg = styled(SuspenseImage)`
+  width: 100%;
+`;
+
+// ProjectPages.tsx
+export const Background = styled.div`
+  background-color: ${theme.palette.grey[50]};
+  clip-path: polygon(0 4%, 100% 0%, 100% 100%, 0% 100%);
+`;
+
+export const PagesWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-top: 35%;
+`;
+
+export const PageImg = styled(SuspenseImage)`
+  margin-bottom: 15%;
+  border-radius: ${theme.shape.borderRadius};
+  box-shadow: 0px 3px 1px -2px rgb(0 0 0 / 20%), 0px 2px 2px 0px rgb(0 0 0 / 14%), 0px 1px 5px 0px rgb(0 0 0 / 12%);
+`;

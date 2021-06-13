@@ -1,9 +1,11 @@
 import React, { useRef } from "react";
 import { useSpring, to } from "react-spring";
-import { PreviewWrapper } from "./styles";
+import { PreviewWrapper, PreviewImg, StyledLink } from "./styles";
 
 type Props = {
-  bg: string;
+  bgHsl: number[];
+  title: string;
+  imgName: string;
 };
 
 // Spring settings
@@ -22,66 +24,34 @@ const updatedConfig = {
   velocity: 0,
 };
 
-const Preview: React.FC<Props> = ({ bg }: Props) => {
+const isTouchDevice = () => "ontouchstart" in window || navigator.maxTouchPoints > 0 || navigator.msMaxTouchPoints > 0;
+
+const Preview: React.FC<Props> = ({ bgHsl, title, imgName }: Props) => {
   const [props, set] = useSpring(() => ({ xys: [0, 0, 1], updatedConfig }));
 
-  const ref = useRef<HTMLDivElement>(null);
+  const ref = useRef<HTMLDivElement | null>(null);
 
   return (
     <PreviewWrapper
       ref={ref}
       onMouseMove={(e) => {
         if (ref?.current) {
-          const rect = ref.current.getBoundingClientRect();
-          set({ xys: calc(e.clientX, e.clientY, rect) });
+          if (!isTouchDevice) {
+            const rect = ref.current.getBoundingClientRect();
+            set({ xys: calc(e.clientX, e.clientY, rect) });
+          }
         }
       }}
       onMouseLeave={() => set({ xys: [0, 0, 1] })}
       style={{ transform: to(props.xys, trans) }}
-      bg={bg}
-    />
+      $bgHsl={bgHsl}
+      $imgName={imgName}
+    >
+      <StyledLink to={`/${title.replace(/\s+/g, "-").toLowerCase()}`} cursor-class="arrow">
+        <PreviewImg src={`images/projects/preview/${imgName}.png`} alt="Project preview" />
+      </StyledLink>
+    </PreviewWrapper>
   );
 };
-
-// const Preview: React.FC<Props> = ({ bg }: Props) => {
-//   const [props, set] = useSpring(() => ({ xys: [0, 0, 1], updatedConfig }));
-
-//   const [open, setOpen] = useState(false);
-
-//   const springApi = useSpringRef();
-//   const { size, ...rest } = useSpring({
-//     ref: springApi,
-//     config: config.stiff,
-//     to: {
-//       size: open ? "100%" : "20%",
-//       top: open ? 0 : 100,
-//       left: open ? 0 : 100,
-//     },
-//   });
-
-//   const ref = useRef<HTMLDivElement>(null);
-
-//   useChain(open ? [springApi] : [springApi], [0, open ? 0.1 : 0.6]);
-
-//   return (
-//     <PreviewWrapper
-//       ref={ref}
-//       onMouseMove={(e) => {
-//         if (ref?.current && !open) {
-//           const rect = ref.current.getBoundingClientRect();
-//           set({ xys: calc(e.clientX, e.clientY, rect) });
-//         }
-//       }}
-//       onMouseLeave={() => !open && set({ xys: [0, 0, 1] })}
-//       onClick={() => {
-//         set({ xys: [0, 0, 1] });
-//         setOpen((prevState) => !prevState);
-//       }}
-//       style={{ ...rest, transform: to(props.xys, trans), width: size, height: size }}
-//     >
-//       <PreviewImg bg={bg} />
-//     </PreviewWrapper>
-//   );
-// };
 
 export default Preview;

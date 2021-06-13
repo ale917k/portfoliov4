@@ -13,6 +13,7 @@ coverage
 
 # TS compiler
 dist
+.vscode
 
 # production
 build

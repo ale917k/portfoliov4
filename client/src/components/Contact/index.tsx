@@ -40,7 +40,7 @@ const Contact: React.FC = () => {
       <Container>
         <Headline>Contact</Headline>
 
-        <Title>Are you looking to craft something aesthetically beautiful?</Title>
+        <Title>Are you looking to craft something aesthetically modern?</Title>
         <Subtitle>Drop me a text, I don’t bite!</Subtitle>
 
         <Form>

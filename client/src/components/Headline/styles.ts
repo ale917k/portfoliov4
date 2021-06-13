@@ -6,7 +6,7 @@ export const StyledHeadline = styled.h2<{ alignItems?: AlignItems }>`
   flex-direction: column;
   align-items: ${(props) => props.alignItems || "center"};
   gap: ${theme.spacing(0.5)};
-  margin: ${theme.spacing(18)} auto ${theme.spacing(14)};
+  margin: 14% auto 11%;
 
   &:after {
     content: "";

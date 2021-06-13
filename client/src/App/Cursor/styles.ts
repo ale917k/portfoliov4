@@ -17,8 +17,8 @@ export const Circle = styled.div`
 
 export const StyledCursor = styled.div`
   position: fixed;
-  left: 0;
   top: 0;
+  left: 0;
   pointer-events: none;
   will-change: transform;
   mix-blend-mode: difference;
@@ -32,8 +32,8 @@ export const StyledCursor = styled.div`
       &:after {
         content: "";
         position: absolute;
-        left: -50%;
         top: -50%;
+        left: -50%;
         width: 100%;
         height: 100%;
         background-image: url("https://svgshare.com/i/MzQ.svg");
@@ -44,8 +44,10 @@ export const StyledCursor = styled.div`
       ${Circle} {
         width: 128px;
         height: 128px;
-        background-color: ${theme.palette.primary};
-        border-color: ${theme.palette.primary};
+        /* background-color: ${theme.palette.primary};
+        border-color: ${theme.palette.primary}; */
+        background-color: #073099;
+        border-color: #073099;
       }
     }
   }

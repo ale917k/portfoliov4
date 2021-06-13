@@ -8,23 +8,20 @@ import { Background, Caption, Wrapper, Title, Scroll } from "./styles";
  * Landing Section.
  * @returns Headline with animated illustration and menu.
  */
-const Landing: React.FC = () => {
-  return (
-    <Background>
-      <Container>
-        <Caption>Creative Developer</Caption>
+const Landing: React.FC = () => (
+  <Background>
+    <Caption>Creative Developer</Caption>
 
-        <Wrapper>
-          <Title>Delivering Web & Mobile experiences.</Title>
-          <Illustration />
-        </Wrapper>
+    <Container>
+      <Wrapper>
+        <Title>Delivering Web & Mobile experiences.</Title>
+        <Illustration />
+      </Wrapper>
+    </Container>
 
-        <Menu />
-
-        <Scroll>Scroll</Scroll>
-      </Container>
-    </Background>
-  );
-};
+    <Menu />
+    <Scroll>Scroll</Scroll>
+  </Background>
+);
 
 export default Landing;

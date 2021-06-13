@@ -12,8 +12,8 @@ type Props = {
  * @param {ReactNode} children - Headline content.
  * @returns Styled headline.
  */
-const Headline: React.FC<Props> = ({ alignItems, children }: Props) => {
-  return <StyledHeadline alignItems={alignItems}>{children}</StyledHeadline>;
-};
+const Headline: React.FC<Props> = ({ alignItems, children }: Props) => (
+  <StyledHeadline alignItems={alignItems}>{children}</StyledHeadline>
+);
 
 export default Headline;

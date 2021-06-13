@@ -10,7 +10,7 @@ export const Ul = styled.ul`
 `;
 
 export const Li = styled.li`
-  opacity: 1;
+  line-height: 1.8;
 
   a {
     color: ${theme.palette.text};

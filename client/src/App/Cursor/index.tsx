@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react";
+import { useLocation } from "react-router-dom";
 import { StyledCursor, Circle } from "./styles";
 
 /**
@@ -6,6 +7,8 @@ import { StyledCursor, Circle } from "./styles";
  * @returns Cursor with animated circle.
  */
 const Cursor: React.FC = () => {
+  const location = useLocation();
+
   const cursor = useRef<HTMLDivElement>(null);
   const circle = useRef<HTMLDivElement>(null);
 
@@ -27,9 +30,7 @@ const Cursor: React.FC = () => {
     window.addEventListener("mousemove", updateCoordinates);
 
     // Return cursor direction angle for "squeeze" effect
-    const getAngle = (diffX: number, diffY: number) => {
-      return (Math.atan2(diffY, diffX) * 180) / Math.PI;
-    };
+    const getAngle = (diffX: number, diffY: number) => (Math.atan2(diffY, diffX) * 180) / Math.PI;
 
     // Return amount to squeeze on cursor
     const getSqueeze = (diffX: number, diffY: number) => {
@@ -69,14 +70,14 @@ const Cursor: React.FC = () => {
     // Cursor modifiers to update cursor with custom classes
     const cursorModifiers = document.querySelectorAll("[cursor-class]");
 
-    cursorModifiers.forEach((curosrModifier) => {
-      curosrModifier.addEventListener("mouseenter", () => {
-        const className = curosrModifier.getAttribute("cursor-class") as string;
+    cursorModifiers.forEach((cursorModifier) => {
+      cursorModifier.addEventListener("mouseenter", () => {
+        const className = cursorModifier.getAttribute("cursor-class") as string;
         classList.add(className);
       });
 
-      curosrModifier.addEventListener("mouseleave", () => {
-        const className = curosrModifier.getAttribute("cursor-class") as string;
+      cursorModifier.addEventListener("mouseleave", () => {
+        const className = cursorModifier.getAttribute("cursor-class") as string;
         classList.remove(className);
       });
     });
@@ -86,6 +87,10 @@ const Cursor: React.FC = () => {
       cancelAnimationFrame(animationFrameId);
     };
   });
+
+  React.useEffect(() => {
+    (cursor.current as HTMLDivElement).classList.remove("arrow");
+  }, [location]);
 
   return (
     <StyledCursor ref={cursor}>

@@ -1,6 +1,8 @@
 import { createGlobalStyle, css } from "styled-components";
+import { isMobile } from "react-device-detect";
 
-const customMediaQuery = (maxWidth: number): string => `@media (max-width: ${maxWidth}px)`;
+const customMediaQuery = (res: number, min?: boolean): string =>
+  `@media (${min ? `min-width: ${res}px)` : `max-width: ${res}px)`}`;
 
 export const theme = {
   breakpoints: {
@@ -25,13 +27,13 @@ export const theme = {
   },
   typography: {
     fontFamily: "'Poppins', 'Roboto', 'Helvetica', 'Arial', sans-serif",
-    fontSize: 16,
+    fontSize: isMobile ? 14 : 16,
     fontWeightLight: 300,
     fontWeightRegular: 400,
     fontWeightBold: 700,
     h1: {
       fontWeight: 700,
-      fontSize: "3.625rem", // 58px
+      fontSize: isMobile ? "3.2rem" : "3.625rem", // 58px
       lineHeight: 1.25,
     },
     h2: {
@@ -122,10 +124,12 @@ const GlobalStyles = createGlobalStyle`
 
   body {
     ${windowSizes};
+    overflow-x: hidden;
   };
 
   #root {
     ${windowSizes};
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -147,10 +151,6 @@ const GlobalStyles = createGlobalStyle`
 
   h4 {
     ${theme.typography.h4};
-  };
-
-  img {
-    width: 50%;
   };
 `;
 

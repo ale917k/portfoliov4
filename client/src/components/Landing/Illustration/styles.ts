@@ -1,13 +1,24 @@
 import styled from "styled-components";
 import { animated } from "react-spring";
+import { theme } from "globalStyles";
 
 export const SvgWrapper = styled.div`
-  flex: 1.5;
   display: flex;
   align-items: center;
   position: relative;
   width: 100%;
-  height: 100%;
+  max-width: min(100%, 100vh);
+
+  &:after {
+    content: "";
+    display: block;
+    width: 100%;
+    padding-bottom: 57.25%;
+  }
+
+  ${theme.breakpoints.desktop} {
+    max-width: 500px;
+  }
 `;
 
 export const AnimatedWrapper = styled(animated.div)`
