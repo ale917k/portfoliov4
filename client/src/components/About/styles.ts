@@ -2,6 +2,10 @@ import styled from "styled-components";
 import { theme } from "globalStyles";
 
 // index.tsx
+export const Wrapper = styled.div`
+  background-color: ${theme.palette.common.white};
+`;
+
 export const Content = styled.div`
   display: flex;
   justify-content: space-between;

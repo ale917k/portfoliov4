@@ -2,6 +2,8 @@ import styled from "styled-components";
 import { theme } from "globalStyles";
 
 export const Wrapper = styled.div`
+  background-color: ${theme.palette.common.white};
+
   & > * {
     align-items: center;
   }

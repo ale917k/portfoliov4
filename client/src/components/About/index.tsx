@@ -2,14 +2,14 @@ import React from "react";
 import Headline from "components/Headline";
 import Container from "components/Container";
 import Skills from "./Skills";
-import { Content, Biography, Title, Paragraph, Portrait } from "./styles";
+import { Wrapper, Content, Biography, Title, Paragraph, Portrait } from "./styles";
 
 /**
  * About Section.
  * @returns Brief biography and portrait.
  */
 const About: React.FC = () => (
-  <div id="about">
+  <Wrapper id="about">
     <Container>
       <Headline>About</Headline>
 
@@ -40,7 +40,7 @@ const About: React.FC = () => (
     </Container>
 
     <Skills />
-  </div>
+  </Wrapper>
 );
 
 export default About;
