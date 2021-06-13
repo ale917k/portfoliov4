@@ -1,14 +1,13 @@
 import styled from "styled-components";
 import { animated } from "react-spring";
 import { Link } from "react-router-dom";
-import SuspenseImage from "components/SuspenseImage";
 import { Wrapper as ContainerWrapper } from "components/Container/styles";
 import { theme } from "globalStyles";
 
 const constrainToPercentage = (value: number) => Math.min(Math.max(value, 0), 100);
 
 // Preview.tsx
-export const PreviewImg = styled(SuspenseImage)`
+export const PreviewImg = styled.img`
   width: 90%;
   transform: translateZ(0);
   transition: transform ${theme.transitions.easing.easeInOut} ${theme.transitions.duration.complex}ms;

@@ -1,5 +1,4 @@
 import styled, { css } from "styled-components";
-import SuspenseImage from "components/SuspenseImage";
 import { theme } from "globalStyles";
 
 const constrainToPercentage = (value: number) => Math.min(Math.max(value, 0), 100);
@@ -20,9 +19,10 @@ export const ProjectCover = styled.div<{ bgHsl: number[] }>`
   background: ${(props) => `linear-gradient(to bottom, 
     hsl(${props.bgHsl[0]}, ${props.bgHsl[1]}%, ${constrainToPercentage(props.bgHsl[2] - 10)}%) 0%,
     hsl(${props.bgHsl[0]}, ${props.bgHsl[1]}%, ${props.bgHsl[2]}%) 80%)`};
+  text-align: center;
 `;
 
-export const CoverSuspenseImage = styled(SuspenseImage)`
+export const CoverImg = styled.img`
   height: 100%;
 `;
 
@@ -42,7 +42,7 @@ export const RespImgBg = styled.div`
   clip-path: polygon(0 0, 100% 20%, 100% 100%, 0% 100%);
 `;
 
-export const RespImg = styled(SuspenseImage)`
+export const RespImg = styled.img`
   min-width: min(1000px, 150%);
   width: 100%;
   max-width: 1440px;
@@ -149,7 +149,7 @@ export const Colour = styled.div<{ bg: string; colourNumbers: number }>`
 `;
 
 // Typography.tsx
-export const TypographyImg = styled(SuspenseImage)`
+export const TypographyImg = styled.img`
   width: 100%;
 `;
 
@@ -165,7 +165,7 @@ export const PagesWrapper = styled.div`
   margin-top: 35%;
 `;
 
-export const PageImg = styled(SuspenseImage)`
+export const PageImg = styled.img`
   margin-bottom: 15%;
   border-radius: ${theme.shape.borderRadius};
   box-shadow: 0px 3px 1px -2px rgb(0 0 0 / 20%), 0px 2px 2px 0px rgb(0 0 0 / 14%), 0px 1px 5px 0px rgb(0 0 0 / 12%);

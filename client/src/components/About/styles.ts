@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import SuspenseImage from "components/SuspenseImage";
 import { theme } from "globalStyles";
 
 // index.tsx
@@ -38,7 +37,7 @@ export const Paragraph = styled.p<{ cursive?: boolean }>`
   font-style: ${(props) => (props.cursive ? "italic" : "normal")};
 `;
 
-export const Portrait = styled(SuspenseImage)`
+export const Portrait = styled.img`
   max-width: ${theme.spacing(60)};
   max-height: ${theme.spacing(60)};
   margin: 0 auto;

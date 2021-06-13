@@ -4,8 +4,9 @@ import { animated, useTransition } from "react-spring";
 import Cursor from "App/Cursor";
 import HomePage from "components/HomePage";
 import ProjectPage from "components/ProjectPage";
-
 import { Wrapper } from "./styles";
+
+const sleep = (t: number) => new Promise((res) => setTimeout(res, t));
 
 /**
  * Container for all sections of the App.
@@ -15,9 +16,12 @@ const App: React.FC = () => {
   const location = useLocation();
 
   const transitions = useTransition(location, {
-    from: { opacity: 0 },
-    enter: { opacity: 1 },
-    leave: { opacity: 0 },
+    from: { opacity: 0, transform: "translate3d(100vw, 0, 0)" },
+    enter: () => async (next) => {
+      await sleep(800);
+      await next({ opacity: 1, transform: "translate3d(0, 0, 0)" });
+    },
+    leave: { opacity: 0, transform: "translate3d(-20vw, 0, 0)" },
   });
 
   return (

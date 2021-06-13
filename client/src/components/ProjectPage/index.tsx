@@ -7,7 +7,7 @@ import ProjectBrief from "./ProjectBrief";
 import Palette from "./Palette";
 import Typography from "./Typography";
 import ProjectPages from "./ProjectPages";
-import { Wrapper, ProjectCover, CoverSuspenseImage, RespImgWrapper, RespImgBg, RespImg } from "./styles";
+import { Wrapper, ProjectCover, CoverImg, RespImgWrapper, RespImgBg, RespImg } from "./styles";
 
 type MatchParams = {
   projectName: string;
@@ -29,7 +29,9 @@ const ProjectPage: React.FC = () => {
   const { title, bgHsl, imgName, year, concept, deliverables, palette, pagesImages } = activeProject || {};
 
   useEffect(() => {
-    window.scrollTo(0, 0);
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 800);
   }, []);
 
   return (
@@ -37,14 +39,14 @@ const ProjectPage: React.FC = () => {
       {activeProject ? (
         <Wrapper>
           <ProjectCover bgHsl={bgHsl}>
-            <CoverSuspenseImage src={`images/projects/cover/${imgName}.png`} lazy />
+            <CoverImg src={`images/projects/cover/${imgName}.png`} />
           </ProjectCover>
 
           <ProjectBrief title={title} year={year} concept={concept} deliverables={deliverables} />
 
           <RespImgWrapper>
             <RespImgBg />
-            <RespImg src={`images/projects/responsive/${imgName}.png`} alt="Project responsiveness" lazy />
+            <RespImg src={`images/projects/responsive/${imgName}.png`} alt="Project responsiveness" />
           </RespImgWrapper>
 
           <Container height="auto">

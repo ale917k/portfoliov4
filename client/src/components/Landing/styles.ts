@@ -7,7 +7,7 @@ export const Background = styled.div`
   flex-direction: column;
   position: relative;
   width: 100%;
-  min-height: 100%;
+  min-height: 100vh;
   padding-bottom: ${theme.spacing(15)};
   background: linear-gradient(0deg, ${theme.palette.grey[50]} 0%, ${theme.palette.common.white} 100%);
 

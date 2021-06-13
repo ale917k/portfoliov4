@@ -36,7 +36,7 @@ const Preview: React.FC<Props> = ({ bgHsl, title, imgName }: Props) => {
       ref={ref}
       onMouseMove={(e) => {
         if (ref?.current) {
-          if (!isTouchDevice) {
+          if (!isTouchDevice()) {
             const rect = ref.current.getBoundingClientRect();
             set({ xys: calc(e.clientX, e.clientY, rect) });
           }

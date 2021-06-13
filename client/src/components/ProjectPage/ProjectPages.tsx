@@ -11,7 +11,7 @@ const ProjectPages: React.FC<Props> = ({ pagesImages }: Props) => (
     <Container>
       <PagesWrapper>
         {pagesImages.map((pageImg) => (
-          <PageImg key={pageImg} src={`images/projects/pages/${pageImg}.png`} alt="Project screenshot" lazy />
+          <PageImg key={pageImg} src={`images/projects/pages/${pageImg}.png`} alt="Project screenshot" />
         ))}
       </PagesWrapper>
     </Container>

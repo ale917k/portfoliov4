@@ -35,7 +35,7 @@ const About: React.FC = () => (
           </Paragraph>
         </Biography>
 
-        <Portrait src="images/portrait.png" alt="Portrait" lazy />
+        <Portrait src="images/portrait.png" alt="Portrait" />
       </Content>
     </Container>
 
