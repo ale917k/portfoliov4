@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Container from "components/Container";
 import Headline from "components/Headline";
 import Input from "components/Input";
+import Button from "components/Button";
 import { Wrapper, Title, Subtitle, Form, Copyright } from "./styles";
 
 type ContactForm = {
@@ -41,7 +42,7 @@ const Contact: React.FC = () => {
         <Headline>Contact</Headline>
 
         <Title>Are you looking to craft something aesthetically modern?</Title>
-        <Subtitle>Drop me a text, I don’t bite!</Subtitle>
+        <Subtitle>Let's materialize your idea!</Subtitle>
 
         <Form>
           <Input
@@ -72,6 +73,7 @@ const Contact: React.FC = () => {
             rows={4}
             required
           />
+          <Button>Send message</Button>
         </Form>
 
         <Copyright>© {year}</Copyright>

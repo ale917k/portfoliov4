@@ -22,6 +22,7 @@ export const Form = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
+  max-width: 400px;
 `;
 
 export const Copyright = styled.p`

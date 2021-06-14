@@ -4,28 +4,26 @@ import styled, { css } from "styled-components";
 export const Wrapper = styled.div`
   position: relative;
   width: 100%;
-  max-width: 400px;
   margin: 0 auto 1rem;
 `;
 
 const sharedInputStyles = css`
   width: 100%;
-  font-size: 0.833rem;
-  outline: none;
   border: 1px solid ${theme.palette.grey[150]};
   border-radius: 5px;
+  outline: none;
   padding: 1rem 0.7rem;
-  transition: all ${theme.transitions.duration.short} ${theme.transitions.easing.easeInOut};
+  ${theme.typography.body.reg};
 
   &:hover {
     border-color: ${theme.palette.common.black};
   }
 
   &:focus {
-    border-color: ${theme.palette.primary};
+    border-color: ${theme.palette.primary.main};
 
     & + label {
-      color: ${theme.palette.primary};
+      color: ${theme.palette.primary.main};
       top: 1px;
       transform: translateY(-50%) scale(0.9);
 
@@ -71,7 +69,7 @@ export const Label = styled.label`
   &:before {
     display: block;
     width: 100%;
-    height: 10px;
+    height: ${theme.spacing(1.75)};
     position: absolute;
     top: 0;
     left: 0;

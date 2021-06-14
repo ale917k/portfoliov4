@@ -8,17 +8,17 @@ import { Ul, Li } from "./styles";
 const Menu: React.FC = () => (
   <Ul>
     <Li>
-      <a href="#work" cursor-class="arrow">
+      <a href="#work" data-cursor="arrow">
         Work
       </a>
     </Li>
     <Li>
-      <a href="#about" cursor-class="arrow">
+      <a href="#about" data-cursor="arrow">
         About
       </a>
     </Li>
     <Li>
-      <a href="#contact" cursor-class="arrow">
+      <a href="#contact" data-cursor="arrow">
         Contact
       </a>
     </Li>

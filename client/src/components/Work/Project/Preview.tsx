@@ -47,7 +47,7 @@ const Preview: React.FC<Props> = ({ bgHsl, title, imgName }: Props) => {
       $bgHsl={bgHsl}
       $imgName={imgName}
     >
-      <StyledLink to={`/${title.replace(/\s+/g, "-").toLowerCase()}`} cursor-class="arrow">
+      <StyledLink to={`/${title.replace(/\s+/g, "-").toLowerCase()}`} data-cursor="arrow">
         <PreviewImg src={`images/projects/preview/${imgName}.png`} alt="Project preview" />
       </StyledLink>
     </PreviewWrapper>

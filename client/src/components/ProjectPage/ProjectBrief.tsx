@@ -24,7 +24,7 @@ const Palette: React.FC<Props> = ({ title, year, concept, deliverables }: Props)
     <BriefWrapper>
       <Title>
         {title}
-        <BackButton to="/" cursor-class="arrow">
+        <BackButton to="/" data-cursor="arrow">
           Back
         </BackButton>
       </Title>

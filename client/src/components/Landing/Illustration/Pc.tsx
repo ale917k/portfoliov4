@@ -19,18 +19,18 @@ const Pc: React.FC = () => (
         <path fill={theme.palette.common.white} d="M318.35 122.276a3.167 3.167 0 100-6.334 3.168 3.168 0 100 6.334z" />
         <path fill={theme.palette.grey[50]} d="M385.139 302.2H163.333V127.076L385.139 302.2z" />
         <path
-          fill={theme.palette.primary}
+          fill={theme.palette.primary.main}
           d="M211.953 289.087c16.488 0 29.854-13.359 29.854-29.839 0-16.48-13.366-29.839-29.854-29.839-16.489 0-29.855 13.359-29.855 29.839 0 16.48 13.366 29.839 29.855 29.839z"
         />
         <path
           fill={theme.palette.common.black}
           d="M218.587 281.664c-20.498 0-37.133-16.626-37.133-37.113 0-20.486 16.635-37.113 37.133-37.113 20.497 0 37.132 16.627 37.132 37.113 0 20.487-16.635 37.113-37.132 37.113zm0-73.731c-20.25 0-36.638 16.379-36.638 36.618s16.388 36.619 36.638 36.619c20.249 0 36.637-16.38 36.637-36.619s-16.388-36.618-36.637-36.618z"
         />
-        <path fill={theme.palette.primary} d="M402.022 218.028h-29.013v6.037h29.013v-6.037z" />
+        <path fill={theme.palette.primary.main} d="M402.022 218.028h-29.013v6.037h29.013v-6.037z" />
         <path fill={theme.palette.common.black} d="M429.5 185.22h-83.92v2.573h83.92v-2.573z" />
         <path fill={theme.palette.common.black} d="M429.5 195.413h-83.92v2.574h83.92v-2.574z" />
         <path fill={theme.palette.common.black} d="M429.5 205.607h-83.92v2.573h83.92v-2.573z" />
-        <path fill={theme.palette.primary} d="M451.977 137.517h-12.13v12.123h12.13v-12.123z" />
+        <path fill={theme.palette.primary.main} d="M451.977 137.517h-12.13v12.123h12.13v-12.123z" />
         <path
           fill={theme.palette.grey[100]}
           d="M457.621 155.282h-14.704v-14.697h14.704v14.697zm-14.11-.644h13.467v-13.459h-13.467v13.459z"

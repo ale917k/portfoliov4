@@ -14,7 +14,7 @@ const Grid: React.FC = () => (
         d="M119.367 93.228A3.366 3.366 0 10116 89.863a3.366 3.366 0 003.367 3.365z"
       />
       <path
-        fill={theme.palette.primary}
+        fill={theme.palette.primary.main}
         d="M136.448 93.228a3.366 3.366 0 10-3.367-3.365 3.366 3.366 0 003.367 3.365z"
       />
       <path

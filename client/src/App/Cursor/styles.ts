@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { theme } from "globalStyles";
 
 export const Circle = styled.div`
   @media (hover: hover) and (pointer: fine) {
@@ -44,8 +43,6 @@ export const StyledCursor = styled.div`
       ${Circle} {
         width: 128px;
         height: 128px;
-        /* background-color: ${theme.palette.primary};
-        border-color: ${theme.palette.primary}; */
         background-color: #073099;
         border-color: #073099;
       }

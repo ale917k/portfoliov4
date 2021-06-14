@@ -68,16 +68,16 @@ const Cursor: React.FC = () => {
     animationFrameId = requestAnimationFrame(loop);
 
     // Cursor modifiers to update cursor with custom classes
-    const cursorModifiers = document.querySelectorAll("[cursor-class]");
+    const cursorModifiers = document.querySelectorAll("[data-cursor]");
 
     cursorModifiers.forEach((cursorModifier) => {
       cursorModifier.addEventListener("mouseenter", () => {
-        const className = cursorModifier.getAttribute("cursor-class") as string;
+        const className = cursorModifier.getAttribute("data-cursor") as string;
         classList.add(className);
       });
 
       cursorModifier.addEventListener("mouseleave", () => {
-        const className = cursorModifier.getAttribute("cursor-class") as string;
+        const className = cursorModifier.getAttribute("data-cursor") as string;
         classList.remove(className);
       });
     });

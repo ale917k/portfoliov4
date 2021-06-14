@@ -17,7 +17,11 @@ export const theme = {
       black: "#292E38",
     },
     type: "light",
-    primary: "#346FEF",
+    primary: {
+      light: "#5A8AF2",
+      main: "#346FEF",
+      dark: "#1356E7",
+    },
     grey: {
       50: "#F9FAFB",
       100: "#E5E8EB",
@@ -103,6 +107,7 @@ const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: ${theme.typography.fontFamily};
 
     &:focus {
       outline: none;
@@ -111,7 +116,6 @@ const GlobalStyles = createGlobalStyle`
 
   html {
     ${windowSizes};
-    font-family: ${theme.typography.fontFamily};
     font-size: ${theme.typography.fontSize}px;
     font-weight: ${theme.typography.fontWeightLight};
 
