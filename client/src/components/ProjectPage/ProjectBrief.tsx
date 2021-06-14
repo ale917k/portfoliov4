@@ -4,7 +4,7 @@ import Headline from "components/Headline";
 import {
   BriefWrapper,
   Title,
-  BackButton,
+  BriefCircleButton,
   Year,
   ConceptWrapper,
   Concept,
@@ -24,9 +24,9 @@ const Palette: React.FC<Props> = ({ title, year, concept, deliverables }: Props)
     <BriefWrapper>
       <Title>
         {title}
-        <BackButton to="/" data-cursor="arrow">
+        <BriefCircleButton to="/" data-cursor="arrow">
           Back
-        </BackButton>
+        </BriefCircleButton>
       </Title>
       <Year>{year}</Year>
 

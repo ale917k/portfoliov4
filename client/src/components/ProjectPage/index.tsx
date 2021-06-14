@@ -1,13 +1,23 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import { useRouteMatch } from "react-router-dom";
 import projects from "data/projects.json";
 import Container from "components/Container";
+import Contact from "components/Contact";
 import PageNotFound from "components/PageNotFound";
 import ProjectBrief from "./ProjectBrief";
 import Palette from "./Palette";
 import Typography from "./Typography";
 import ProjectPages from "./ProjectPages";
-import { Wrapper, ProjectCover, CoverImg, RespImgWrapper, RespImgBg, RespImg } from "./styles";
+import {
+  Wrapper,
+  ProjectCover,
+  CoverImg,
+  RespImgWrapper,
+  RespImgBg,
+  RespImg,
+  ButtonsWrapper,
+  CircleButton,
+} from "./styles";
 
 type MatchParams = {
   projectName: string;
@@ -20,11 +30,19 @@ type MatchParams = {
  */
 const ProjectPage: React.FC = () => {
   const { projectName } = (useRouteMatch()?.params as MatchParams) || {};
+  const nextProjectTitle = useRef<string>("");
 
   // Filter projects with the one whose title matches url param (format with dash instead of space, e.g. "project-title")
-  const activeProject: ProjectType = projects.filter(
-    (project) => project.title.replace(/\s+/g, "-").toLowerCase() === projectName,
-  )[0];
+  const activeProject: ProjectType = projects.filter((project, index) => {
+    const isActiveProject = project.title.replace(/\s+/g, "-").toLowerCase() === projectName;
+
+    // Add next project title
+    if (isActiveProject) {
+      nextProjectTitle.current = projects[index + 1]?.title.replace(/\s+/g, "-").toLowerCase();
+    }
+
+    return isActiveProject;
+  })[0];
 
   const { title, bgHsl, imgName, year, concept, deliverables, palette, pagesImages } = activeProject || {};
 
@@ -55,6 +73,19 @@ const ProjectPage: React.FC = () => {
           </Container>
 
           <ProjectPages pagesImages={pagesImages} />
+
+          <ButtonsWrapper>
+            <CircleButton to="/" data-cursor="arrow">
+              Back
+            </CircleButton>
+            {nextProjectTitle.current && (
+              <CircleButton to={`/${nextProjectTitle.current}`} data-cursor="arrow">
+                Next
+              </CircleButton>
+            )}
+          </ButtonsWrapper>
+
+          <Contact />
         </Wrapper>
       ) : (
         <PageNotFound />

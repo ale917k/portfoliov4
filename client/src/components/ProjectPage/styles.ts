@@ -53,6 +53,34 @@ export const RespImg = styled.img`
   z-index: 1;
 `;
 
+export const ButtonsWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  gap: ${theme.spacing(5)};
+  position: absolute;
+  width: 100%;
+  transform: translateY(-50%);
+`;
+
+const circleButtonStyles = css`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+  border-radius: 50%;
+  ${theme.typography.h2};
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: ${theme.palette.common.black};
+`;
+
+export const CircleButton = styled(Link)`
+  ${circleButtonStyles};
+`;
+
 // ProjectBrief.tsx
 export const BriefWrapper = styled.div`
   display: grid;
@@ -69,21 +97,10 @@ export const Title = styled.h1`
   text-align: center;
 `;
 
-export const BackButton = styled(Link)`
-  display: flex;
-  justify-content: center;
-  align-items: center;
+export const BriefCircleButton = styled(Link)`
+  ${circleButtonStyles};
   position: absolute;
   right: 0;
-  width: 100px;
-  height: 100px;
-  border: 1px solid black;
-  border-radius: 50%;
-  ${theme.typography.h2};
-  font-size: 0.9rem;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: ${theme.palette.common.black};
 
   ${theme.breakpoints.desktop} {
     display: none;
