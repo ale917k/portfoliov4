@@ -22,6 +22,10 @@ export const theme = {
       main: "#346FEF",
       dark: "#1356E7",
     },
+    alert: {
+      success: "#0B8329",
+      error: "#83190B",
+    },
     grey: {
       50: "#F9FAFB",
       100: "#E5E8EB",

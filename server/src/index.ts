@@ -18,18 +18,12 @@ app.use(express.json());
 
 // Set up transport protocols and authentication
 const transport = nodemailer.createTransport({
-  host: "smtp.mailtrap.io",
-  port: 2525,
+  service: "gmail",
   auth: {
     user: process.env.MAIL_USER_KEY,
     pass: process.env.MAIL_PASS_KEY,
   },
 });
-
-// Colours console messages - Ref. https://stackoverflow.com/a/41407246/11895568
-console.info = <T>(content: T) => console.log("\x1b[36m%s", content); // blue
-console.warn = <T>(content: T) => console.log("\x1b[33m%s", content); // yellow
-console.error = <T>(content: T) => console.log("\x1b[31m%s", content); // red
 
 // PWA Service worker
 app.get("/service-worker.js", (req, res) => {
@@ -37,28 +31,7 @@ app.get("/service-worker.js", (req, res) => {
 });
 
 // API for sending email
-app.post("/api/send_email", (req, res) => {
-  // const registrationConfirmationEmail = {
-  //   from: process.env.MAIL_SENDER,
-  //   to: req.body.email,
-  //   subject: "Registration Confirmation",
-  //   html: req.body.messageHtml,
-  // };
-
-  // transport.sendMail(registrationConfirmationEmail, (err) => {
-  //   if (err) {
-  //     reject({
-  //       message: "Failed Sending Email",
-  //       error: err,
-  //     });
-  //   } else {
-  //     resolve({
-  //       message: "Created User Successfully",
-  //       result: result._id,
-  //     });
-  //   }
-  // });
-
+app.post(`${baseURL}/send_email`, (req, res) => {
   const contactEmail = {
     from: req.body.email,
     to: process.env.MAIL_RECEIVER,
@@ -76,7 +49,6 @@ app.post("/api/send_email", (req, res) => {
       res.status(201).json({
         message: "Email sent successfully!",
       });
-      console.log(info);
     }
   });
 });

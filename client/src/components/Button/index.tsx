@@ -3,8 +3,8 @@ import { StyledButton } from "./styles";
 
 type Props = React.ButtonHTMLAttributes<HTMLButtonElement>;
 
-const Button: React.FC<Props> = ({ type, onClick, children }: Props) => (
-  <StyledButton type={type} onClick={onClick} data-cursor="arrow">
+const Button: React.FC<Props> = ({ children, ...rest }: Props) => (
+  <StyledButton data-cursor="arrow" {...rest}>
     {children}
   </StyledButton>
 );
