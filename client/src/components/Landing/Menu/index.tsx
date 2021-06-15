@@ -1,4 +1,5 @@
 import React from "react";
+import AnchorLink from "react-anchor-link-smooth-scroll";
 import { Ul, Li } from "./styles";
 
 /**
@@ -8,19 +9,19 @@ import { Ul, Li } from "./styles";
 const Menu: React.FC = () => (
   <Ul>
     <Li>
-      <a href="#work" data-cursor="arrow">
+      <AnchorLink href="#work" data-cursor="arrow">
         Work
-      </a>
+      </AnchorLink>
     </Li>
     <Li>
-      <a href="#about" data-cursor="arrow">
+      <AnchorLink href="#about" data-cursor="arrow">
         About
-      </a>
+      </AnchorLink>
     </Li>
     <Li>
-      <a href="#contact" data-cursor="arrow">
+      <AnchorLink href="#contact" data-cursor="arrow">
         Contact
-      </a>
+      </AnchorLink>
     </Li>
   </Ul>
 );
