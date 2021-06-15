@@ -41,6 +41,11 @@ export const Paragraph = styled.p<{ cursive?: boolean }>`
   font-style: ${(props) => (props.cursive ? "italic" : "normal")};
 `;
 
+export const IconsWrapper = styled.div`
+  display: flex;
+  gap: ${theme.spacing(2)};
+`;
+
 export const Portrait = styled.img`
   max-width: ${theme.spacing(60)};
   max-height: ${theme.spacing(60)};

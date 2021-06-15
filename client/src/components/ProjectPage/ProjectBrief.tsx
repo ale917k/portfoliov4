@@ -10,6 +10,7 @@ import {
   Concept,
   TechnologiesWrapper,
   Technology,
+  CodeLink,
 } from "./styles";
 
 type Props = {
@@ -17,9 +18,10 @@ type Props = {
   year: number;
   concept: string;
   technologies: string[];
+  codeUrl: string;
 };
 
-const Palette: React.FC<Props> = ({ title, year, concept, technologies }: Props) => (
+const Palette: React.FC<Props> = ({ title, year, concept, technologies, codeUrl }: Props) => (
   <Container height="auto">
     <BriefWrapper>
       <Title>
@@ -40,6 +42,11 @@ const Palette: React.FC<Props> = ({ title, year, concept, technologies }: Props)
         {technologies.map((technology, index) => (
           <Technology key={`${technology}-${index}`}>{technology}</Technology>
         ))}
+        <Technology>
+          <CodeLink href={codeUrl} rel="noopener noreferrer" target="_blank" data-cursor="arrow">
+            View code
+          </CodeLink>
+        </Technology>
       </TechnologiesWrapper>
     </BriefWrapper>
   </Container>

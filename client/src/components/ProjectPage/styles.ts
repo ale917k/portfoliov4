@@ -75,6 +75,7 @@ const circleButtonStyles = css`
   text-transform: uppercase;
   text-decoration: none;
   color: ${theme.palette.common.black};
+  background-color: ${theme.palette.common.white};
 `;
 
 export const CircleButton = styled(Link)`
@@ -145,6 +146,11 @@ export const Technology = styled.p`
   ${theme.typography.body.reg};
   text-align: right;
   text-transform: uppercase;
+`;
+
+export const CodeLink = styled.a`
+  color: ${theme.palette.common.black};
+  font-weight: ${theme.typography.fontWeightBold};
 `;
 
 export const PaletteWrapper = styled.div`

@@ -8,9 +8,7 @@ type ProjectType = {
   year: number;
   concept: string;
   technologies: string[];
+  codeUrl: string;
   palette: string[];
   pagesImages: string[];
-  offset: number;
-  speed: number;
-  factor: number;
 };

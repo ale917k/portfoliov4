@@ -2,7 +2,7 @@ import React from "react";
 import Headline from "components/Headline";
 import Container from "components/Container";
 import Skills from "./Skills";
-import { Wrapper, Content, Biography, Title, Paragraph, Portrait } from "./styles";
+import { Wrapper, Content, Biography, Title, Paragraph, IconsWrapper, Portrait } from "./styles";
 
 /**
  * About Section.
@@ -33,6 +33,22 @@ const About: React.FC = () => (
             What i love is travelling, meeting new people, discover different realities and create something new, every
             day.
           </Paragraph>
+
+          <IconsWrapper>
+            <a href="https://www.linkedin.com/in/alessio-petrin-41b058190/" rel="noopener noreferrer" target="_blank">
+              <img src="images/icons/linkedin.svg" />
+            </a>
+            <a
+              href="https://stackoverflow.com/users/11895568/ale917k?tab=profile"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <img src="images/icons/stack-overflow.svg" />
+            </a>
+            <a href="https://github.com/ale917k" rel="noopener noreferrer" target="_blank">
+              <img src="images/icons/github.svg" />
+            </a>
+          </IconsWrapper>
         </Biography>
 
         <Portrait src="images/portrait.png" alt="Portrait" />

@@ -18,6 +18,7 @@
       "Heroku",
       "Stripe"
     ],
+    "codeUrl": "https://github.com/ale917k/ecommerce",
     "palette": [
       "#47D3FF",
       "#F46036",
@@ -30,10 +31,7 @@
       "#534C62",
       "#171123"
     ],
-    "pagesImages": ["ecommerce1", "ecommerce2", "ecommerce3", "ecommerce4", "ecommerce5"],
-    "offset": 2.05,
-    "speed": 0.8,
-    "factor": 2
+    "pagesImages": ["ecommerce1", "ecommerce2", "ecommerce3", "ecommerce4", "ecommerce5"]
   },
   {
     "title": "Auth Starter",
@@ -54,11 +52,9 @@
       "AWS Fargate",
       "AWS Nginx EC2"
     ],
+    "codeUrl": "https://github.com/ale917k/react-auth-starter",
     "palette": ["#47D3FF", "#F46036", "#414770", "#F2F0F4", "#9893A4", "#171123"],
-    "pagesImages": ["auth-starter1", "auth-starter2", "auth-starter3", "auth-starter4", "auth-starter5"],
-    "offset": 2.9,
-    "speed": 1,
-    "factor": 2
+    "pagesImages": ["auth-starter1", "auth-starter2", "auth-starter3", "auth-starter4", "auth-starter5"]
   },
   {
     "title": "AI Face Recognition",
@@ -78,6 +74,7 @@
       "AWS Lambda",
       "AWS Fargate"
     ],
+    "codeUrl": "https://github.com/ale917k/smart-recognition",
     "palette": [
       "#47D3FF",
       "#F46036",
@@ -90,9 +87,6 @@
       "#534C62",
       "#171123"
     ],
-    "pagesImages": ["ai-face-rec1", "ai-face-rec2", "ai-face-rec3", "ai-face-rec4"],
-    "offset": 3.1,
-    "speed": 1.2,
-    "factor": 2
+    "pagesImages": ["ai-face-rec1", "ai-face-rec2", "ai-face-rec3", "ai-face-rec4"]
   }
 ]
