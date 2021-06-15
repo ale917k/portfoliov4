@@ -9,17 +9,17 @@ import { Ul, Li } from "./styles";
 const Menu: React.FC = () => (
   <Ul>
     <Li>
-      <AnchorLink href="#work" data-cursor="arrow">
+      <AnchorLink href="#work" data-cursor="arrow-bottom">
         Work
       </AnchorLink>
     </Li>
     <Li>
-      <AnchorLink href="#about" data-cursor="arrow">
+      <AnchorLink href="#about" data-cursor="arrow-bottom">
         About
       </AnchorLink>
     </Li>
     <Li>
-      <AnchorLink href="#contact" data-cursor="arrow">
+      <AnchorLink href="#contact" data-cursor="arrow-bottom">
         Contact
       </AnchorLink>
     </Li>

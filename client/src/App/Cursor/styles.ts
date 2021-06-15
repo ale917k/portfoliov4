@@ -27,7 +27,7 @@ export const StyledCursor = styled.div`
   transition-timing-function: cubic-bezier(0.25, 1, 0.5, 1);
 
   @media (hover: hover) and (pointer: fine) {
-    &.arrow {
+    &[class*="arrow"] {
       &:after {
         content: "";
         position: absolute;
@@ -45,6 +45,18 @@ export const StyledCursor = styled.div`
         height: 128px;
         background-color: #073099;
         border-color: #073099;
+      }
+
+      &[class*="bottom"] {
+        &:after {
+          transform: rotate(90deg);
+        }
+      }
+
+      &[class*="left"] {
+        &:after {
+          transform: rotate(180deg);
+        }
       }
     }
   }

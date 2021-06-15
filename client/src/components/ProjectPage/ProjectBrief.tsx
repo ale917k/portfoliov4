@@ -26,7 +26,7 @@ const Palette: React.FC<Props> = ({ title, year, concept, technologies, codeUrl 
     <BriefWrapper>
       <Title>
         {title}
-        <BriefCircleButton to="/" data-cursor="arrow">
+        <BriefCircleButton to="/" data-cursor="arrow-left">
           Back
         </BriefCircleButton>
       </Title>

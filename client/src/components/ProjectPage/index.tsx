@@ -75,7 +75,7 @@ const ProjectPage: React.FC = () => {
           <ProjectPages pagesImages={pagesImages} />
 
           <ButtonsWrapper>
-            <CircleButton to="/" data-cursor="arrow">
+            <CircleButton to="/" data-cursor="arrow-left">
               Back
             </CircleButton>
             {nextProjectTitle.current && (
