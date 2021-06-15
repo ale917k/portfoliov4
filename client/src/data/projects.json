@@ -1,0 +1,98 @@
+[
+  {
+    "title": "Ecommerce Platform",
+    "headline": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Malesuada consectetur.",
+    "bgHsl": [42, 98, 56],
+    "imgName": "ecommerce",
+    "year": 2021,
+    "concept": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mattis interdum mi sed in consequat hac imperdiet mattis. In bibendum consequat vitae cursus ullamcorper. Amet scelerisque imperdiet congue ac pharetra sed amet eu faucibus. Amet, enim vitae sed vulputate volutpat cum non nulla.",
+    "technologies": [
+      "React",
+      "Redux",
+      "Redux Thunk",
+      "Redux Saga",
+      "PWA",
+      "Node.js",
+      "Express.js",
+      "Firebase",
+      "Heroku",
+      "Stripe"
+    ],
+    "palette": [
+      "#47D3FF",
+      "#F46036",
+      "#414770",
+      "#372248",
+      "#171123",
+      "#F2F0F4",
+      "#D0CDD8",
+      "#9893A4",
+      "#534C62",
+      "#171123"
+    ],
+    "pagesImages": ["ecommerce1", "ecommerce2", "ecommerce3", "ecommerce4", "ecommerce5"],
+    "offset": 2.05,
+    "speed": 0.8,
+    "factor": 2
+  },
+  {
+    "title": "Auth Starter",
+    "headline": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Malesuada consectetur.",
+    "bgHsl": [227, 87, 60],
+    "imgName": "auth-starter",
+    "year": 2021,
+    "concept": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mattis interdum mi sed in consequat hac imperdiet mattis. In bibendum consequat vitae cursus ullamcorper. Amet scelerisque imperdiet congue ac pharetra sed amet eu faucibus. Amet, enim vitae sed vulputate volutpat cum non nulla.",
+    "technologies": [
+      "React (w/Hooks)",
+      "ContextAPI",
+      "JWT Sessions",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Docker",
+      "Typescript",
+      "AWS Fargate",
+      "AWS Nginx EC2"
+    ],
+    "palette": ["#47D3FF", "#F46036", "#414770", "#F2F0F4", "#9893A4", "#171123"],
+    "pagesImages": ["auth-starter1", "auth-starter2", "auth-starter3", "auth-starter4", "auth-starter5"],
+    "offset": 2.9,
+    "speed": 1,
+    "factor": 2
+  },
+  {
+    "title": "AI Face Recognition",
+    "headline": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Malesuada consectetur.",
+    "bgHsl": [16, 100, 72],
+    "imgName": "ai-face-rec",
+    "year": 2021,
+    "concept": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mattis interdum mi sed in consequat hac imperdiet mattis. In bibendum consequat vitae cursus ullamcorper. Amet scelerisque imperdiet congue ac pharetra sed amet eu faucibus. Amet, enim vitae sed vulputate volutpat cum non nulla.",
+    "technologies": [
+      "React (w/Hooks)",
+      "Node.js",
+      "Express.js",
+      "JWT Sessions",
+      "PostgreSQL",
+      "Redis",
+      "Docker",
+      "AWS Lambda",
+      "AWS Fargate"
+    ],
+    "palette": [
+      "#47D3FF",
+      "#F46036",
+      "#414770",
+      "#372248",
+      "#171123",
+      "#F2F0F4",
+      "#D0CDD8",
+      "#9893A4",
+      "#534C62",
+      "#171123"
+    ],
+    "pagesImages": ["ai-face-rec1", "ai-face-rec2", "ai-face-rec3", "ai-face-rec4"],
+    "offset": 3.1,
+    "speed": 1.2,
+    "factor": 2
+  }
+]

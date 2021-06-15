@@ -127,7 +127,7 @@ export const Concept = styled.p`
   ${theme.typography.body.reg};
 `;
 
-export const DeliverablesWrapper = styled.div`
+export const TechnologiesWrapper = styled.div`
   margin-top: ${theme.spacing(13)};
 
   h2 {
@@ -140,7 +140,7 @@ export const DeliverablesWrapper = styled.div`
   }
 `;
 
-export const Deliverable = styled.p`
+export const Technology = styled.p`
   padding-bottom: ${theme.spacing(0.5)};
   ${theme.typography.body.reg};
   text-align: right;

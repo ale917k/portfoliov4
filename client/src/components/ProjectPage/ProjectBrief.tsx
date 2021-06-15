@@ -8,18 +8,18 @@ import {
   Year,
   ConceptWrapper,
   Concept,
-  DeliverablesWrapper,
-  Deliverable,
+  TechnologiesWrapper,
+  Technology,
 } from "./styles";
 
 type Props = {
   title: string;
   year: number;
   concept: string;
-  deliverables: string[];
+  technologies: string[];
 };
 
-const Palette: React.FC<Props> = ({ title, year, concept, deliverables }: Props) => (
+const Palette: React.FC<Props> = ({ title, year, concept, technologies }: Props) => (
   <Container height="auto">
     <BriefWrapper>
       <Title>
@@ -35,12 +35,12 @@ const Palette: React.FC<Props> = ({ title, year, concept, deliverables }: Props)
         <Concept>{concept}</Concept>
       </ConceptWrapper>
 
-      <DeliverablesWrapper>
-        <Headline alignItems="flex-end">Deliverables</Headline>
-        {deliverables.map((deliverable, index) => (
-          <Deliverable key={`${deliverable}-${index}`}>{deliverable}</Deliverable>
+      <TechnologiesWrapper>
+        <Headline alignItems="flex-end">Technologies</Headline>
+        {technologies.map((technology, index) => (
+          <Technology key={`${technology}-${index}`}>{technology}</Technology>
         ))}
-      </DeliverablesWrapper>
+      </TechnologiesWrapper>
     </BriefWrapper>
   </Container>
 );

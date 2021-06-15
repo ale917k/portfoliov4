@@ -7,7 +7,7 @@ type ProjectType = {
   imgName: string;
   year: number;
   concept: string;
-  deliverables: string[];
+  technologies: string[];
   palette: string[];
   pagesImages: string[];
   offset: number;

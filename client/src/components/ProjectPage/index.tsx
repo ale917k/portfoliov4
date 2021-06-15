@@ -44,7 +44,7 @@ const ProjectPage: React.FC = () => {
     return isActiveProject;
   })[0];
 
-  const { title, bgHsl, imgName, year, concept, deliverables, palette, pagesImages } = activeProject || {};
+  const { title, bgHsl, imgName, year, concept, technologies, palette, pagesImages } = activeProject || {};
 
   useEffect(() => {
     setTimeout(() => {
@@ -60,7 +60,7 @@ const ProjectPage: React.FC = () => {
             <CoverImg src={`images/projects/cover/${imgName}.png`} />
           </ProjectCover>
 
-          <ProjectBrief title={title} year={year} concept={concept} deliverables={deliverables} />
+          <ProjectBrief title={title} year={year} concept={concept} technologies={technologies} />
 
           <RespImgWrapper>
             <RespImgBg />
