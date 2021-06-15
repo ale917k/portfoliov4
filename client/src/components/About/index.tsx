@@ -35,18 +35,24 @@ const About: React.FC = () => (
           </Paragraph>
 
           <IconsWrapper>
-            <a href="https://www.linkedin.com/in/alessio-petrin-41b058190/" rel="noopener noreferrer" target="_blank">
-              <img src="images/icons/linkedin.svg" />
+            <a
+              href="https://www.linkedin.com/in/alessio-petrin-41b058190/"
+              rel="noopener noreferrer"
+              target="_blank"
+              data-cursor="arrow"
+            >
+              <img src="images/icons/linkedin.svg" alt="Linkedin" />
             </a>
             <a
               href="https://stackoverflow.com/users/11895568/ale917k?tab=profile"
               rel="noopener noreferrer"
               target="_blank"
+              data-cursor="arrow"
             >
-              <img src="images/icons/stack-overflow.svg" />
+              <img src="images/icons/stack-overflow.svg" alt="Stack Overflow" />
             </a>
-            <a href="https://github.com/ale917k" rel="noopener noreferrer" target="_blank">
-              <img src="images/icons/github.svg" />
+            <a href="https://github.com/ale917k" rel="noopener noreferrer" target="_blank" data-cursor="arrow">
+              <img src="images/icons/github.svg" alt="Github" />
             </a>
           </IconsWrapper>
         </Biography>

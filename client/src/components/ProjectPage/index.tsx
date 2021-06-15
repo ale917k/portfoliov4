@@ -57,7 +57,7 @@ const ProjectPage: React.FC = () => {
       {activeProject ? (
         <Wrapper>
           <ProjectCover bgHsl={bgHsl}>
-            <CoverImg src={`images/projects/cover/${imgName}.png`} />
+            <CoverImg src={`images/projects/cover/${imgName}.png`} alt="Project cover" />
           </ProjectCover>
 
           <ProjectBrief title={title} year={year} concept={concept} technologies={technologies} codeUrl={codeUrl} />
