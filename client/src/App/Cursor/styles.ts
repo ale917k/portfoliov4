@@ -58,6 +58,12 @@ export const StyledCursor = styled.div`
           transform: rotate(180deg);
         }
       }
+
+      &[class*="top"] {
+        &:after {
+          transform: rotate(270deg);
+        }
+      }
     }
   }
 `;

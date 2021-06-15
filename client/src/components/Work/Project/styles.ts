@@ -21,14 +21,13 @@ export const PreviewWrapper = styled(animated.div)<{ $bgHsl: number[]; $imgName:
     hsl(${props.$bgHsl[0]}, ${props.$bgHsl[1]}%, ${props.$bgHsl[2]}%) 80%)`};
   border-radius: ${theme.shape.borderRadius};
   z-index: 1;
-  box-shadow: 0px 5px 5px -3px rgb(0 0 0 / 20%), 0px 8px 10px 1px rgb(0 0 0 / 14%), 0px 3px 14px 2px rgb(0 0 0 / 12%);
+  box-shadow: ${theme.shadows[8]};
   transition: box-shadow ${theme.transitions.easing.easeInOut} ${theme.transitions.duration.complex}ms;
   will-change: transform;
   cursor: pointer;
 
   &:hover {
-    box-shadow: 0px 11px 15px -7px rgb(0 0 0 / 20%), 0px 24px 38px 3px rgb(0 0 0 / 14%),
-      0px 9px 46px 8px rgb(0 0 0 / 12%);
+    box-shadow: ${theme.shadows[24]};
 
     ${PreviewImg} {
       transform: translateZ(0) scale(1.4) rotate(15deg);

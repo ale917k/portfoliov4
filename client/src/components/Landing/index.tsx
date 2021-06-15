@@ -9,7 +9,7 @@ import { Background, Caption, Wrapper, Title, Scroll } from "./styles";
  * @returns Headline with animated illustration and menu.
  */
 const Landing: React.FC = () => (
-  <Background>
+  <Background id="landing">
     <Caption>Creative Developer</Caption>
 
     <Container>
