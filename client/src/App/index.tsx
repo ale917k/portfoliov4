@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Switch, Route, useLocation } from "react-router-dom";
+import ReactGA from "react-ga";
 import { animated, useTransition } from "react-spring";
 import Cursor from "App/Cursor";
 import HomePage from "components/HomePage";
@@ -24,6 +25,15 @@ const App: React.FC = () => {
     },
     leave: { opacity: 0, transform: "translate3d(-20vw, 0, 0)" },
   });
+
+  const initializeReactGA = () => {
+    ReactGA.initialize("UA-179205326-1");
+    ReactGA.pageview("/homepage");
+  };
+
+  useEffect(() => {
+    initializeReactGA();
+  }, []);
 
   return (
     <Wrapper>

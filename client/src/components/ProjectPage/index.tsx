@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { useRouteMatch } from "react-router-dom";
+import ReactGA from "react-ga";
 import projects from "data/projects.json";
 import Container from "components/Container";
 import Contact from "components/Contact";
@@ -47,6 +48,8 @@ const ProjectPage: React.FC = () => {
   const { title, bgHsl, imgName, year, concept, technologies, codeUrl, palette, pagesImages } = activeProject || {};
 
   useEffect(() => {
+    ReactGA.pageview(`/${projectName}`);
+
     setTimeout(() => {
       window.scrollTo(0, 0);
     }, 800);
