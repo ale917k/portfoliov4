@@ -9,7 +9,7 @@ type Props = {
 const Typography: React.FC<Props> = ({ imgName }: Props) => (
   <>
     <Headline>Typography</Headline>
-    <TypographyImg src={`images/projects/typography/${imgName}.svg`} alt="Typography" />
+    <TypographyImg imgName={imgName} />
   </>
 );
 

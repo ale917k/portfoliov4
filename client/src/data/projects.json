@@ -4,7 +4,7 @@
     "headline": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Malesuada consectetur.",
     "bgHsl": [42, 98, 56],
     "imgName": "ecommerce",
-    "year": 2021,
+    "year": 2020,
     "concept": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mattis interdum mi sed in consequat hac imperdiet mattis. In bibendum consequat vitae cursus ullamcorper. Amet scelerisque imperdiet congue ac pharetra sed amet eu faucibus. Amet, enim vitae sed vulputate volutpat cum non nulla.",
     "technologies": [
       "React",
@@ -19,18 +19,7 @@
       "Stripe"
     ],
     "codeUrl": "https://github.com/ale917k/ecommerce",
-    "palette": [
-      "#47D3FF",
-      "#F46036",
-      "#414770",
-      "#372248",
-      "#171123",
-      "#F2F0F4",
-      "#D0CDD8",
-      "#9893A4",
-      "#534C62",
-      "#171123"
-    ],
+    "palette": ["#F7F7F8", "#FDCA53", "#275DAD", "#0C0C0E", "#F7F7F8", "#D8D8DA", "#AAAAB1", "#0C0C0E"],
     "pagesImages": ["ecommerce1", "ecommerce2", "ecommerce3", "ecommerce4", "ecommerce5"]
   },
   {
@@ -53,7 +42,7 @@
       "AWS Nginx EC2"
     ],
     "codeUrl": "https://github.com/ale917k/react-auth-starter",
-    "palette": ["#47D3FF", "#F46036", "#414770", "#F2F0F4", "#9893A4", "#171123"],
+    "palette": ["#f7f8fa", "#72a1e5", "#538ddf", "#2363be", "#F7F7F8", "#e4e7eb", "#99a2ad", "#191e24"],
     "pagesImages": ["auth-starter1", "auth-starter2", "auth-starter3", "auth-starter4", "auth-starter5"]
   },
   {
@@ -61,7 +50,7 @@
     "headline": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Malesuada consectetur.",
     "bgHsl": [16, 100, 72],
     "imgName": "ai-face-rec",
-    "year": 2021,
+    "year": 2020,
     "concept": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mattis interdum mi sed in consequat hac imperdiet mattis. In bibendum consequat vitae cursus ullamcorper. Amet scelerisque imperdiet congue ac pharetra sed amet eu faucibus. Amet, enim vitae sed vulputate volutpat cum non nulla.",
     "technologies": [
       "React (w/Hooks)",
@@ -75,18 +64,7 @@
       "AWS Fargate"
     ],
     "codeUrl": "https://github.com/ale917k/smart-recognition",
-    "palette": [
-      "#47D3FF",
-      "#F46036",
-      "#414770",
-      "#372248",
-      "#171123",
-      "#F2F0F4",
-      "#D0CDD8",
-      "#9893A4",
-      "#534C62",
-      "#171123"
-    ],
+    "palette": ["#FF5EDF", "#04C8DE", "#FFBB11", "#F1DEDE", "#5D576B", "#161925"],
     "pagesImages": ["ai-face-rec1", "ai-face-rec2", "ai-face-rec3", "ai-face-rec4"]
   }
 ]

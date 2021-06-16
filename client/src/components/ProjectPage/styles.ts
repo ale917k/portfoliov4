@@ -80,6 +80,10 @@ const circleButtonStyles = css`
 
 export const CircleButton = styled(Link)`
   ${circleButtonStyles};
+
+  ${theme.breakpoints.tablet} {
+    display: none;
+  }
 `;
 
 // ProjectBrief.tsx
@@ -199,8 +203,27 @@ export const Colour = styled.div<{ bg: string; colourNumbers: number }>`
 `;
 
 // Typography.tsx
-export const TypographyImg = styled.img`
+export const TypographyImg = styled.div<{ imgName: string }>`
   width: 100%;
+  z-index: 1;
+
+  ${theme.breakpoints.custom(768, true)} {
+    background: ${(props) => `url(images/projects/typography/${props.imgName}-desktop.svg) center / contain no-repeat`};
+    margin-bottom: -10%;
+    padding-bottom: 31.75%;
+  }
+
+  ${theme.breakpoints.tablet} {
+    background: ${(props) => `url(images/projects/typography/${props.imgName}-tablet.svg) center / contain no-repeat`};
+    margin-bottom: -10%;
+    padding-bottom: 49%;
+  }
+
+  ${theme.breakpoints.phone} {
+    background: ${(props) => `url(images/projects/typography/${props.imgName}-phone.svg) center / contain no-repeat`};
+    margin-bottom: -10%;
+    padding-bottom: 66.5%;
+  }
 `;
 
 // ProjectPages.tsx
