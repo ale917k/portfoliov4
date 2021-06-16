@@ -89,7 +89,10 @@ const Cursor: React.FC = () => {
   });
 
   React.useEffect(() => {
+    (cursor.current as HTMLDivElement).classList.remove("arrow-top");
     (cursor.current as HTMLDivElement).classList.remove("arrow");
+    (cursor.current as HTMLDivElement).classList.remove("arrow-bottom");
+    (cursor.current as HTMLDivElement).classList.remove("arrow-left");
   }, [location]);
 
   return (
