@@ -3,8 +3,7 @@ import path from "path";
 import cors from "cors";
 import morgan from "morgan";
 import nodemailer from "nodemailer";
-
-if (process.env.NODE_ENV !== "production") require("dotenv").config();
+import "dotenv/config";
 
 // App configuration
 const app = express();
@@ -49,6 +48,7 @@ app.post(`${baseURL}/send_email`, (req, res) => {
     if (err) {
       res.status(500).json({
         error: err,
+        user: process.env.MAIL_USER,
       });
       console.log("Email transport err", err);
     } else {
@@ -61,9 +61,9 @@ app.post(`${baseURL}/send_email`, (req, res) => {
 
 // Base listeners
 app.get(`${baseURL}/`, (_, res) => {
-  res.status(201).send(`Server successfully connected on port ${port}`);
+  res.status(201).send(`Server is up and running on ${process.env.NODE_ENV} - port ${port}`);
 });
 
 app.listen(port, () => {
-  console.log(`Server is up and running on ${process.env.NODE_ENV} - port ${port}`);
+  console.log(`Listening on ${process.env.NODE_ENV} - port ${port}`);
 });
