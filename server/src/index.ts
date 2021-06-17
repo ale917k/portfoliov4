@@ -18,10 +18,16 @@ app.use(express.json());
 
 // Set up transport protocols and authentication
 const transport = nodemailer.createTransport({
-  service: "gmail",
+  host: "smtp.gmail.com",
+  port: 465,
+  secure: true,
   auth: {
-    user: process.env.MAIL_USER_KEY,
-    pass: process.env.MAIL_PASS_KEY,
+    type: "OAuth2",
+    user: process.env.MAIL_USER,
+    clientId: process.env.MAIL_CLIENT_ID,
+    clientSecret: process.env.MAIL_CLIENT_SECRET,
+    refreshToken: process.env.MAIL_REFRESH_TOKEN,
+    accessToken: process.env.MAIL_ACCESS_TOKEN,
   },
 });
 
@@ -34,7 +40,7 @@ app.get("/service-worker.js", (req, res) => {
 app.post(`${baseURL}/send_email`, (req, res) => {
   const contactEmail = {
     from: req.body.email,
-    to: process.env.MAIL_RECEIVER,
+    to: process.env.MAIL_USER,
     subject: process.env.MAIL_SUBJECT,
     html: req.body.messageHtml,
   };
@@ -44,7 +50,7 @@ app.post(`${baseURL}/send_email`, (req, res) => {
       res.status(500).json({
         error: err,
       });
-      console.log(err);
+      console.log("Email transport err", err);
     } else {
       res.status(201).json({
         message: "Email sent successfully!",
