@@ -4,6 +4,7 @@ import Container from "components/Container";
 import Headline from "components/Headline";
 import Input from "components/Input";
 import Button from "components/Button";
+import Spinner from "components/Spinner";
 import ContactEmail from "./ContactEmail";
 import Alert from "./Alert";
 import { Wrapper, Title, Subtitle, Form, Copyright } from "./styles";
@@ -42,6 +43,9 @@ const Contact: React.FC = () => {
   } as AlertType;
   const [alertMessage, setAlertMessage] = useState<AlertType>(initialAlertMessage);
 
+  // Check if form request has been sent so to trigger spinner while waiting response
+  const [isLoading, setIsLoading] = useState<boolean>(false);
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>): void => {
     e.preventDefault();
 
@@ -57,6 +61,8 @@ const Contact: React.FC = () => {
 
   const sendMessage = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+    setIsLoading(true);
 
     const messageHtml = renderEmail(<ContactEmail {...form} />);
 
@@ -77,12 +83,14 @@ const Contact: React.FC = () => {
           message: "Message successfully sent. Thank you for reaching out, I will be back to you asap!",
         });
         setForm(initialForm);
+        setIsLoading(false);
       } else {
         setAlertMessage({
           isActive: true,
           severity: "error",
           message: "Ooops, something went wrong. Please try again or reach me out at 07380 404 540",
         });
+        setIsLoading(false);
       }
     } catch (err) {
       setAlertMessage({
@@ -90,6 +98,7 @@ const Contact: React.FC = () => {
         severity: "error",
         message: "Ooops, something went wrong. Please try again or reach me out at 07380 404 540",
       });
+      setIsLoading(false);
     }
   };
 
@@ -130,7 +139,10 @@ const Contact: React.FC = () => {
             rows={4}
             required
           />
-          <Button type="submit">Send message</Button>
+          <Button type="submit" disabled={isLoading}>
+            {isLoading ? <Spinner /> : "Send message"}
+          </Button>
+
           {alertMessage.isActive && <Alert severity={alertMessage.severity} message={alertMessage.message} />}
         </Form>
 
