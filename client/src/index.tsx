@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import { BrowserRouter } from "react-router-dom";
 import GlobalStyles from "globalStyles";
 import App from "./App";
-import register from "./serviceWorker";
+// import register from "./serviceWorker";
 import reportWebVitals from "./reportWebVitals";
 
 ReactDOM.render(
@@ -17,7 +17,7 @@ ReactDOM.render(
 );
 
 // Register service worker
-register();
+// register();
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
