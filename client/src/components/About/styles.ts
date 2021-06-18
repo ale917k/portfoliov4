@@ -47,7 +47,7 @@ export const IconsWrapper = styled.div`
 `;
 
 export const Portrait = styled.img`
-  max-width: ${theme.spacing(60)};
+  max-width: min(80%, ${theme.spacing(60)});
   max-height: ${theme.spacing(60)};
   margin: 0 auto;
 
@@ -64,11 +64,15 @@ export const SkillsWrapper = styled.div`
   clip-path: polygon(0 10vw, 100% 0, 100% 100%, 0 100%);
 
   h2 {
-    margin-top: 20%;
+    margin-top: max(18vmin, ${theme.spacing(16)});
   }
 
   ${theme.breakpoints.tablet} {
     margin-top: -7.1vw;
+
+    h2 {
+      margin-top: max(18vmin, ${theme.spacing(14)});
+    }
   }
 `;
 

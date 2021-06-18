@@ -34,6 +34,14 @@ export const StyledAlert = styled.div<{ severity: "success" | "error" | "" }>`
 `;
 
 export const Copyright = styled.p`
-  padding: ${theme.spacing(20)} 0 ${theme.spacing(6)};
+  padding: ${theme.spacing(16)} 0 ${theme.spacing(10)};
   color: ${theme.palette.grey[150]};
+
+  ${theme.breakpoints.desktop} {
+    padding: ${theme.spacing(14)} 0 ${theme.spacing(8)};
+  }
+
+  ${theme.breakpoints.tablet} {
+    padding: ${theme.spacing(10)} 0 ${theme.spacing(6)};
+  }
 `;

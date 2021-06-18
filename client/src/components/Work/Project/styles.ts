@@ -117,6 +117,8 @@ export const Wrapper = styled.div<{ isOdd: boolean }>`
   }
 
   ${theme.breakpoints.desktop} {
+    margin-bottom: ${theme.spacing(20)};
+
     &:nth-child(n) {
       text-align: left;
 
@@ -135,5 +137,13 @@ export const Wrapper = styled.div<{ isOdd: boolean }>`
         right: -100%;
       }
     }
+  }
+
+  ${theme.breakpoints.tablet} {
+    margin-bottom: ${theme.spacing(18)};
+  }
+
+  ${theme.breakpoints.phone} {
+    margin-bottom: ${theme.spacing(16)};
   }
 `;

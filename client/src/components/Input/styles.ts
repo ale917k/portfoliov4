@@ -76,4 +76,8 @@ export const Label = styled.label`
     background-color: ${theme.palette.common.white};
     z-index: -1;
   }
+
+  ${theme.breakpoints.tablet} {
+    top: ${theme.spacing(2.75)};
+  }
 `;

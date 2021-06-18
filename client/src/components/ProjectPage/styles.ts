@@ -100,6 +100,18 @@ export const Title = styled.h1`
   grid-column: span 2;
   padding: ${theme.spacing(16)} 0 ${theme.spacing(5)};
   text-align: center;
+
+  ${theme.breakpoints.desktop} {
+    padding: ${theme.spacing(14)} 0 ${theme.spacing(5)};
+  }
+
+  ${theme.breakpoints.tablet} {
+    padding: ${theme.spacing(12)} 0 ${theme.spacing(4)};
+  }
+
+  ${theme.breakpoints.phone} {
+    padding: ${theme.spacing(10)} 0 ${theme.spacing(4)};
+  }
 `;
 
 export const BriefCircleButton = styled(Link)`
@@ -137,6 +149,14 @@ export const TechnologiesWrapper = styled.div`
 
   h2 {
     margin-bottom: ${theme.spacing(3)};
+  }
+
+  ${theme.breakpoints.desktop} {
+    margin-top: ${theme.spacing(11)};
+  }
+
+  ${theme.breakpoints.tablet} {
+    margin-top: ${theme.spacing(9)};
   }
 
   ${theme.breakpoints.phone} {
@@ -235,11 +255,23 @@ export const Background = styled.div`
 export const PagesWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  margin-top: 35%;
+  margin-top: 32%;
 `;
 
 export const PageImg = styled.img`
-  margin-bottom: 15%;
   border-radius: ${theme.shape.borderRadius};
   box-shadow: ${theme.shadows[2]};
+  margin-bottom: ${theme.spacing(20)};
+
+  ${theme.breakpoints.desktop} {
+    margin-bottom: ${theme.spacing(16)};
+  }
+
+  ${theme.breakpoints.tablet} {
+    margin-bottom: ${theme.spacing(14)};
+  }
+
+  ${theme.breakpoints.phone} {
+    margin-bottom: ${theme.spacing(12)};
+  }
 `;
