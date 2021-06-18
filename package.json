@@ -6,6 +6,7 @@
   "license": "ISC",
   "author": "",
   "scripts": {
+    "build": "cd client; npm run build",
     "bundle": "cd client; npm run bundle",
     "client": "cd client; npm start",
     "preinstall": "cd client; npm install --legacy-peer-deps; cd ../server; npm install",

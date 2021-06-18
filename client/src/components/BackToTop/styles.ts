@@ -10,6 +10,7 @@ export const Wrapper = styled.div`
   left: 0;
   width: 100%;
   height: calc(100% - 100vh);
+  pointer-events: none;
 `;
 
 export const ScrollableArea = styled.div`
@@ -29,6 +30,7 @@ export const StyledLink = styled(AnchorLink)`
   border-radius: 50%;
   box-shadow: ${theme.shadows[1]};
   z-index: 10;
+  pointer-events: all;
 
   ${theme.breakpoints.desktop} {
     display: none;

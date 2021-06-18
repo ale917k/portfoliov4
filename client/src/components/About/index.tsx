@@ -18,22 +18,24 @@ const About: React.FC = () => (
           <Title>Who Am I?</Title>
 
           <Paragraph>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Accumsan, sed et elementum lorem pellentesque in
-            amet cursus consequat. Consectetur auctor eu velit et nibh tristique.
+            Hi! I am Alessio, a London based full-stack developer with an incredible passion for technology and modern
+            user experiences.
           </Paragraph>
 
           <Paragraph>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Accumsan, sed et elementum lorem pellentesque in
-            amet cursus consequat. Consectetur auctor eu velit et nibh tristique.
+            I specialize in frontend development with a keen focus on clean UIs and easy to use UXs, but I am more than
+            happy to take on projects requiring full-stack development.
           </Paragraph>
 
-          {/* Let's find out if I'm suited enough for your needs. Drop me a line to share more projects or know more about me! */}
+          <Paragraph>
+            Let's find out if I'm suited enough for your needs. Drop me a line to share more projects or know more about
+            me!
+          </Paragraph>
 
           <Paragraph cursive>
             What i love is travelling, meeting new people, discover different realities and create something new, every
             day.
           </Paragraph>
-
           <IconsWrapper>
             <a
               href="https://www.linkedin.com/in/alessio-petrin-41b058190/"

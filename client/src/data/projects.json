@@ -1,11 +1,11 @@
 [
   {
     "title": "Ecommerce Platform",
-    "headline": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Malesuada consectetur.",
+    "headline": "Ecommerce Progressive Web App with user auth, categories and payments.",
     "bgHsl": [42, 98, 56],
     "imgName": "ecommerce",
     "year": 2020,
-    "concept": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mattis interdum mi sed in consequat hac imperdiet mattis. In bibendum consequat vitae cursus ullamcorper. Amet scelerisque imperdiet congue ac pharetra sed amet eu faucibus. Amet, enim vitae sed vulputate volutpat cum non nulla.",
+    "concept": "This ecommerce has been designed to work as a base code for ecommerce solutions, including product categories, cart, checkout, user authentication and payment system out of the box. Built with Redux, Redux Thunk and Redux Saga for its state management, Firebase for its backend and Stripe for handling payments, it results in a highly robust, secure and predictable system.",
     "technologies": [
       "React",
       "Redux",
@@ -24,11 +24,11 @@
   },
   {
     "title": "Auth Starter",
-    "headline": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Malesuada consectetur.",
+    "headline": "Robust and highly scalable user authentication starter solution.",
     "bgHsl": [227, 87, 60],
     "imgName": "auth-starter",
     "year": 2021,
-    "concept": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mattis interdum mi sed in consequat hac imperdiet mattis. In bibendum consequat vitae cursus ullamcorper. Amet scelerisque imperdiet congue ac pharetra sed amet eu faucibus. Amet, enim vitae sed vulputate volutpat cum non nulla.",
+    "concept": "The idea behind this work is to have a solid, clean and performant solution to be reused as a starter for any project requiring user authentication. From a modern theme-based React frontend to a robust and scalable backend with Redis sessions and Docker containers to type-safety, this starter allows the creation of new projects in less than an hour, staging and production deployment included.",
     "technologies": [
       "React (w/Hooks)",
       "ContextAPI",
@@ -36,6 +36,7 @@
       "Node.js",
       "Express.js",
       "MongoDB",
+      "Redis",
       "Docker",
       "Typescript",
       "AWS Fargate",
@@ -47,11 +48,11 @@
   },
   {
     "title": "AI Face Recognition",
-    "headline": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Malesuada consectetur.",
+    "headline": "Web App allowing users to detect faces in pictures using Clarifai's AI API.",
     "bgHsl": [16, 100, 72],
     "imgName": "ai-face-rec",
     "year": 2020,
-    "concept": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mattis interdum mi sed in consequat hac imperdiet mattis. In bibendum consequat vitae cursus ullamcorper. Amet scelerisque imperdiet congue ac pharetra sed amet eu faucibus. Amet, enim vitae sed vulputate volutpat cum non nulla.",
+    "concept": "Spanning from AI face detection to user authentication, sessions, containers and serverless solutions, this project can be seen as a playground for learning and testing modern technologies. The Machine Learning used to recognise faces given a picture has been implemented through Clarifai's API.",
     "technologies": [
       "React (w/Hooks)",
       "Node.js",

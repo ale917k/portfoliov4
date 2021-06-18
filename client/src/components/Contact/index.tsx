@@ -99,7 +99,7 @@ const Contact: React.FC = () => {
         <Headline>Contact</Headline>
 
         <Title>Are you looking to craft something aesthetically modern?</Title>
-        <Subtitle>Let's materialize your idea!</Subtitle>
+        <Subtitle>Let’s make your idea a reality!</Subtitle>
 
         <Form onSubmit={sendMessage}>
           <Input
