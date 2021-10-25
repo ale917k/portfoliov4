@@ -1,5 +1,7 @@
 {
-  "name": "react-auth-starter-server",
+  "name": "server",
+  "version": "1.0.0",
+  "license": "ISC",
   "main": "dist/index.js",
   "scripts": {
     "start": "tsc -w & nodemon .",
