@@ -9,6 +9,8 @@
     "build": "cd client; npm run build",
     "bundle": "cd client; npm run bundle",
     "client": "cd client; npm start",
+    "deploy:client": "git push https://git.heroku.com/ale917k-portfolio-client.git HEAD:master",
+    "deploy:server": "git push https://git.heroku.com/ale917k-portfolio-server.git HEAD:master",
     "preinstall": "cd client; npm install --legacy-peer-deps; cd ../server; npm install",
     "server": "cd server; npm start",
     "start": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\""
