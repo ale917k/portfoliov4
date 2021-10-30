@@ -4,9 +4,11 @@
   "license": "ISC",
   "main": "dist/index.js",
   "scripts": {
+    "deploy": "yarn tsc; yarn zip; aws lambda update-function-code --function-name sendEmail --zip-file fileb://./sendEmail.zip",
     "start": "tsc -w & nodemon .",
     "start:prod": "nodemon .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "zip": "zip -r sendEmail.zip . -x 'node_modules/*'"
   },
   "dependencies": {
     "@types/morgan": "^1.9.2",
