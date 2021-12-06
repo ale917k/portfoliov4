@@ -36,7 +36,7 @@ app.get("/service-worker.js", (req, res) => {
 });
 
 // API for sending email
-app.post(`${baseURL}/send_email`, (req, res) => {
+app.post(`${baseURL}/send-email`, (req, res) => {
   const contactEmail = {
     from: req.body.email,
     to: process.env.MAIL_USER,

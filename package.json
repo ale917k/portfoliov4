@@ -1,10 +1,14 @@
 {
   "name": "react-auth-starter",
   "version": "1.0.0",
+  "private": true,
   "description": "",
   "keywords": [],
   "license": "ISC",
   "author": "",
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
     "client": "yarn workspace client start",
     "server": "yarn workspace server start",

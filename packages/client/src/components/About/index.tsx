@@ -18,18 +18,18 @@ const About: React.FC = () => (
           <Title>Who Am I?</Title>
 
           <Paragraph>
-            Hi! I am Alessio, a London based full-stack developer with an incredible passion for technology and modern
+            Hi! I am Alessio, a London based Full Stack Engineer with an incredible passion for technology and modern
             user experiences.
           </Paragraph>
 
           <Paragraph>
-            I specialize in frontend development with a keen focus on clean UIs and easy to use UXs, but I am more than
-            happy to take on projects requiring full-stack development.
+            I specialize in frontend development with a keen focus on clean UIs and easy to use UXs, but I fully enjoy
+            working on projects requiring hands on the full stack.
           </Paragraph>
 
           <Paragraph>
-            Let's find out if I'm suited enough for your needs. Drop me a line to share more projects or know more about
-            me!
+            Let's find out if I'm suited enough for your needs. Drop me a line to share projects, ideas or simply know
+            more about me!
           </Paragraph>
 
           <Paragraph cursive>
