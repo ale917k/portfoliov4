@@ -67,7 +67,7 @@ const Contact: React.FC = () => {
     const messageHtml = renderEmail(<ContactEmail {...form} />);
 
     try {
-      const data = await fetch("https://hfeysfkvlc.execute-api.eu-west-2.amazonaws.com/Production", {
+      const data = await fetch("https://hfeysfkvlc.execute-api.eu-west-2.amazonaws.com/Production/send-email", {
         method: "post",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
