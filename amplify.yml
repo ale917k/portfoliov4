@@ -1,0 +1,13 @@
+version: 1
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - nvm use 16
+        - npm install
+    build:
+      commands:
+        - npm run build
+  runtime:
+    name: "Node.js"
+    version: "16"
