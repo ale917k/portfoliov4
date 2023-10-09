@@ -18,24 +18,29 @@ const About: React.FC = () => (
           <Title>Who Am I?</Title>
 
           <Paragraph>
-            Hi! I am Alessio, a London based Full Stack Engineer with an incredible passion for technology and modern
-            user experiences.
+            Hello! I'm Alessio, a Software Engineer nestled in the vibrant heart of London, crafting seamless, scalable,
+            and meaningful digital solutions from the ground up with a delightful blend of creativity and technical
+            mastery.
           </Paragraph>
 
           <Paragraph>
-            I specialize in frontend development with a keen focus on clean UIs and easy to use UXs, but I fully enjoy
-            working on projects requiring hands on the full stack.
+            With a hearty experience spanning the entire tech stack, my journey has been fuelled by an unyielding
+            passion for marrying robust functionality with stellar user experiences, always tailored to meet the varied
+            needs of businesses both big and small.
           </Paragraph>
 
           <Paragraph>
-            Let's find out if I'm suited enough for your needs. Drop me a line to share projects, ideas or simply know
-            more about me!
+            Whether navigating the intricacies of backend systems or painting the digital canvas with user-centric
+            interfaces, my mission is simple: to bring your visionary projects to life with a touch of innovation, a
+            sprinkle of strategic thinking, and a whole lot of care.
           </Paragraph>
 
-          <Paragraph cursive>
-            What i love is travelling, meeting new people, discover different realities and create something new, every
-            day.
+          <Paragraph>
+            I love travelling, meeting new people, discover different realities and create something new, every day.
           </Paragraph>
+
+          <Paragraph>Let's chat, explore synergies, and perhaps weave the digital future together!</Paragraph>
+
           <IconsWrapper>
             <a
               href="https://www.linkedin.com/in/alessio-petrin-41b058190/"

@@ -18,6 +18,7 @@ export const Content = styled.div`
 
   ${theme.breakpoints.tablet} {
     flex-direction: column;
+    gap: ${theme.spacing(5)};
   }
 `;
 
@@ -47,12 +48,17 @@ export const IconsWrapper = styled.div`
 `;
 
 export const Portrait = styled.img`
-  max-width: min(80%, ${theme.spacing(60)});
+  max-width: min(45%, ${theme.spacing(60)});
   max-height: ${theme.spacing(60)};
   margin: 0 auto;
 
   ${theme.breakpoints.tablet} {
     align-self: center;
+    max-width: min(60%, ${theme.spacing(60)});
+  }
+
+  ${theme.breakpoints.phone} {
+    max-width: min(80%, ${theme.spacing(60)});
   }
 `;
 
